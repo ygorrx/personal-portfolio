@@ -1,0 +1,36 @@
+.container{
+    width: 100vw;
+    height: 222px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    
+}
+
+.footer {
+    max-width: 100rem;
+    width: 100rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.2em;
+    color: var(--secondary-color);
+    font-family: var(--type-first);
+    font-weight: 300;
+  }
+
+
+  .footer span {
+    font-weight: bold;
+  }
+
+  .icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .icons a{
+    margin-right: 1.3em;
+  }
