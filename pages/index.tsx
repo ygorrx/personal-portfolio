@@ -78,7 +78,7 @@ const Home = () => {
             height="887"
           />
         </div>
-       </div>
+      </div>
     </div>
   )
 }
