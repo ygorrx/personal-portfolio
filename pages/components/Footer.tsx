@@ -17,8 +17,8 @@ const Footer = () => {
           >
             <Image
               src="/assets/white-icons/mail-white.svg"
-              width="34"
-              height="34"
+              width="26"
+              height="26"
             />
           </a>
           <a
@@ -28,8 +28,8 @@ const Footer = () => {
           >
             <Image
               src="/assets/white-icons/github-white.svg"
-              width="34"
-              height="34"
+              width="26"
+              height="26"
             />
           </a>
           <a
@@ -39,8 +39,8 @@ const Footer = () => {
           >
             <Image
               src="/assets/white-icons/linkedin-white.svg"
-              width="34"
-              height="34"
+              width="26"
+              height="26"
             />
           </a>
           <a
@@ -50,8 +50,8 @@ const Footer = () => {
           >
             <Image
               src="/assets/white-icons/insta-white.svg"
-              width="34"
-              height="34"
+              width="26"
+              height="26"
             />
           </a>
           <a
@@ -61,8 +61,8 @@ const Footer = () => {
           >
             <Image
               src="/assets/white-icons/behance-white.svg"
-              width="34"
-              height="34"
+              width="26"
+              height="26"
             />
           </a>
         </div>

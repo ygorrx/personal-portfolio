@@ -20,8 +20,9 @@
 }
 
 .text {
+  padding-left: 0.5rem;
   grid-column-start: 1; 
-  grid-column-end: 5;
+  grid-column-end: 6;
   grid-row-start: 5;
   grid-row-end: 6;
   line-height: 14px;
@@ -50,6 +51,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 0.5rem;
 }
 
 .logos a{
@@ -65,10 +67,3 @@
   grid-row-end: 7;
 }
 
-.image_bg_1{
-
-}
-
-.image_bg_2{
-  
-}

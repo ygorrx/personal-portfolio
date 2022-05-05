@@ -78,20 +78,7 @@ const Home = () => {
             height="887"
           />
         </div>
-
-        <Image
-          className={styles.image_bg_1}
-          src="/assets/molecules.svg"
-          width="511"
-          height="690"
-        />
-        <Image
-          className={styles.image_bg_2}
-          src="/assets/molecules.svg"
-          width="511"
-          height="690"
-        />
-      </div>
+       </div>
     </div>
   )
 }
