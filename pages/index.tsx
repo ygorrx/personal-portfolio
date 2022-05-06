@@ -78,6 +78,14 @@ const Home = () => {
             height="887"
           />
         </div>
+        <div className={styles.image_scroll}>
+          <Image
+            src="/assets/scroll-mouse-icon.gif"
+            layout="responsive"
+            width="50"
+            height="50"
+          />
+        </div>
       </div>
     </div>
   )

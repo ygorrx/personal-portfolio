@@ -18,8 +18,31 @@ a {
   --type-second: 'Grape Nuts';
   --primary-color: #1D1D1E;
   --secondary-color: #EFEFEF;
+  margin: 0;
 }
 
 .main-container {
   min-height: 70vh;
+}
+
+.title{
+  font-family: var(--type-first);
+  color: var(--primary-color);
+  line-height: 1;
+  font-size: 3rem;
+  padding-top: 3rem;
+  padding-left: 12rem;
+  position: relative;
+ 
+  
+}
+
+.title::after{
+  content: url(../public/assets/black-icons/arrow-down.svg);
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+  position: absolute;
+  bottom: 18px;
+  left: 150px;
 }

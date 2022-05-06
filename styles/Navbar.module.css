@@ -48,3 +48,7 @@
       box-shadow: 2px 2px 4px black;
       border-radius: 50px;
   }
+
+  .link_home{
+    cursor: pointer;
+  }

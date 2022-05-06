@@ -8,7 +8,7 @@
 
 .main {
   display: grid; 
-  grid-template-columns: 1.6fr 1fr 0.8fr 0.6fr 1.9fr 0.8fr 0.7fr; 
+  grid-template-columns: 1.6fr 1fr 0.8fr 1.3fr 0.8fr 0.8fr 0.7fr; 
   grid-template-rows: 0.3fr 0.3fr 2.5fr 1fr 1.2fr 0.6fr 1.1fr;  
   gap: 0px 0px; 
   max-width: 100rem;
@@ -25,7 +25,7 @@
   grid-column-end: 6;
   grid-row-start: 5;
   grid-row-end: 6;
-  line-height: 14px;
+  line-height: 45px;
 }
 
 .text h1 {
@@ -65,5 +65,14 @@
   grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 7;
+}
+
+.image_scroll{
+  width: 50px;
+  height: 50px;
+  grid-column-start: 5; 
+  grid-column-end: 6;
+  grid-row-start: 7;
+  grid-row-end: 8;
 }
 

@@ -6,17 +6,19 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.nav}>
-        <div>
-          <Image
-            src="/assets/ym-logo.png"
-            width="103"
-            height="103"
-            alt="logo"
-          ></Image>
-        </div>
+        <Link href="/">
+          <div className={styles.link_home}>
+            <Image
+              src="/assets/ym-logo.png"
+              width="103"
+              height="103"
+              alt="logo"
+            ></Image>
+          </div>
+        </Link>
         <ul className={styles.link_items}>
           <li>
-            <Link href="/">
+            <Link href="/Projects">
               <a>Projects</a>
             </Link>
           </li>
