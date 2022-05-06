@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link href="/">
           <div className={styles.link_home}>
             <Image
-              src="/assets/ym-logo.png"
+              src="/assets/ym-logo.svg"
               width="103"
               height="103"
               alt="logo"

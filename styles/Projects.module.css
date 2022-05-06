@@ -1,5 +1,90 @@
 .container{
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.container_wrapper{
+  max-width: 100rem;
+  width: 100rem;
+  display: grid; 
+  grid-template-columns: 0.3fr 0.3fr 3.1fr 0.3fr; 
+  grid-template-rows: 0.4fr 0.4fr 2.3fr; 
+  padding-bottom: 6rem;
+}
+
+.container_center{
+    grid-column-start: 1; 
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.container_center p {
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 60px;
+}
+
+.cards{
+ 
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1; 
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 0.6fr 0.6fr; 
+    grid-template-rows: 0.4fr 0.4fr; 
+    gap: 64px 300px; 
+    
+  }
+
+.card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  
+}
+
+.image_card {
+  width: 100%;
+  height: 360px;
+  position: relative;
+  object-fit: cover;
+}
+
+.card_body {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.card_body h1{
+  font-weight: 700;
+  font-size: 2.2rem;
+  font-family: var(--type-first);
+}
+
+.card_body p {
+  font-weight: 400;
+  font-size: 1.2rem
+}
+
+.card_body span {
+  font-weight: 700;
+}
+
+.buttons {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import homeImage from '../assets/home-img.png'
 
 const Home = () => {
   return (

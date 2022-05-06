@@ -2,11 +2,7 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import Head from 'next/head'
 
-type Props = {
-  children?: JSX.Element | JSX.Element[] | string | string[]
-}
-
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Head>

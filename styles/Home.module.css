@@ -17,6 +17,7 @@
   color: var(--primary-color);
   color: var(--primary-color);
   font-family: var(--type-first);
+  padding-bottom: 1.5rem;
 }
 
 .text {
