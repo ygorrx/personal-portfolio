@@ -46,7 +46,7 @@ const Projects = () => {
     <div className={`animeLeft ${styles.container}`}>
       <div className={styles.container_wrapper}>
         <div className={styles.container_center}>
-          <h1 className="title">Projects</h1>
+          <h1 className="title">projects</h1>
           <p>A collection of my recent works.</p>
         </div>
         <div className={styles.cards}>
