@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: var(--background);
 }
 
 .nav {
@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1em 1.2em;
-    color: var(--primary-color);
+    color: var(--text-primary);
     font-family: var(--type-first);
     font-weight: 300;
 }
@@ -30,7 +30,7 @@
   }
   
   .link_items a {
-    color: var(--primary-color);
+    color: var(--text-primary);
     text-decoration: none;
     padding: 5px;
     transition: 0.4s;

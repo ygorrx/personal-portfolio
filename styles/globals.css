@@ -22,6 +22,19 @@ a {
   padding: 0;
 }
 
+:root {
+  --background: white;
+  --text-primary: black;
+  --text-secondary: royalblue;
+  --accent: purple;
+}
+[data-theme='dark'] {
+  --background: black;
+  --text-primary: white;
+  --text-secondary: grey;
+  --accent: darkred;
+}
+
 .main-container {
   min-height: 70vh;
 }

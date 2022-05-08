@@ -32,14 +32,6 @@ const Navbar = () => {
               <a>Contact</a>
             </Link>
           </li>
-          <div className={styles.light_mode_button}>
-            <Image
-              src="/assets/dark-mode-button.svg"
-              width="50"
-              height="50"
-              alt="button"
-            />
-          </div>
         </ul>
       </div>
     </nav>
