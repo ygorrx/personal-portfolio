@@ -24,14 +24,16 @@ a {
 
 :root {
   --background: white;
+  --background-2: black;
   --text-primary: black;
-  --text-secondary: royalblue;
+  --text-secondary: white;
   --accent: purple;
 }
 [data-theme='dark'] {
   --background: black;
+  --background-2: white;
   --text-primary: white;
-  --text-secondary: grey;
+  --text-secondary: black;
   --accent: darkred;
 }
 
