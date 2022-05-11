@@ -14,8 +14,7 @@
   max-width: 100rem;
   width: 100rem;
   height: 100vh;
-  color: var(--primary-color);
-  color: var(--primary-color);
+  color: var(--text-primary);
   font-family: var(--type-first);
   padding-bottom: 1.5rem;
 }

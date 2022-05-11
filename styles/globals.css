@@ -23,17 +23,17 @@ a {
 }
 
 :root {
-  --background: white;
-  --background-2: black;
-  --text-primary: black;
-  --text-secondary: white;
+  --background: #EFEFEF;
+  --background-2: #1D1D1E;
+  --text-primary: #1D1D1E;
+  --text-secondary: #EFEFEF;
   --accent: purple;
 }
 [data-theme='dark'] {
-  --background: black;
-  --background-2: white;
-  --text-primary: white;
-  --text-secondary: black;
+  --background: #1D1D1E;
+  --background-2: #EFEFEF;
+  --text-primary: #EFEFEF;
+  --text-secondary: #1D1D1E;
   --accent: darkred;
 }
 
