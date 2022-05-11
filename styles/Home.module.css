@@ -74,5 +74,6 @@
   grid-column-end: 6;
   grid-row-start: 7;
   grid-row-end: 8;
+  background-color: (--background);
 }
 
