@@ -16,8 +16,6 @@ a {
   box-sizing: border-box;
   --type-first: 'Heebo', Helvetica;
   --type-second: 'Grape Nuts';
-  --primary-color: #1D1D1E;
-  --secondary-color: #EFEFEF;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +25,7 @@ a {
   --background-2: #1D1D1E;
   --text-primary: #1D1D1E;
   --text-secondary: #EFEFEF;
+  --icon-secondary: #EFEFEF;
   --accent: purple;
 }
 [data-theme='dark'] {
@@ -35,6 +34,7 @@ a {
   --text-primary: #EFEFEF;
   --text-secondary: #1D1D1E;
   --accent: darkred;
+  --icon-secondary: #EFEFEF;
 }
 
 .main-container {

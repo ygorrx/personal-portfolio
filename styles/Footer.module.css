@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     
-    color: var(--text-secondary);
+    
     font-family: var(--type-first);
     font-weight: 300;
   }
@@ -25,11 +25,15 @@
     font-weight: bold;
   }
 
+  .footer p {
+    color: var(--text-secondary);
+  }
+
   .icons {
       display: flex;
       justify-content: space-between;
       align-items: center;
-  }
+    }
 
   .icons a{
     margin-right: 1.3em;

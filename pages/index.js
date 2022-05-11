@@ -29,7 +29,7 @@ const Home = () => {
             <IconContext.Provider
               value={{ size: '25px', color: 'var(--text-primary)' }}
             >
-              <FaBehance />
+              <FaMailBulk />
             </IconContext.Provider>
           </a>
           <a

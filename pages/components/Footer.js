@@ -1,5 +1,12 @@
 import styles from '../../styles/Footer.module.css'
-import Image from 'next/image'
+import {
+  FaBehance,
+  FaMailBulk,
+  FaGithub,
+  FaLinkedinIn,
+  FaInstagram
+} from 'react-icons/fa'
+import { IconContext } from 'react-icons'
 
 const Footer = () => {
   return (
@@ -15,55 +22,55 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/assets/white-icons/mail-white.svg"
-              width="26"
-              height="26"
-            />
+            <IconContext.Provider
+              value={{ size: '25px', color: 'var(--text-secondary)' }}
+            >
+              <FaMailBulk />
+            </IconContext.Provider>
           </a>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/assets/white-icons/github-white.svg"
-              width="26"
-              height="26"
-            />
+            <IconContext.Provider
+              value={{ size: '25px', color: 'var(--text-secondary)' }}
+            >
+              <FaGithub />
+            </IconContext.Provider>
           </a>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/assets/white-icons/linkedin-white.svg"
-              width="26"
-              height="26"
-            />
+            <IconContext.Provider
+              value={{ size: '25px', color: 'var(--text-secondary)' }}
+            >
+              <FaLinkedinIn />
+            </IconContext.Provider>
           </a>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/assets/white-icons/insta-white.svg"
-              width="26"
-              height="26"
-            />
+            <IconContext.Provider
+              value={{ size: '25px', color: 'var(--text-secondary)' }}
+            >
+              <FaInstagram />
+            </IconContext.Provider>
           </a>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/assets/white-icons/behance-white.svg"
-              width="26"
-              height="26"
-            />
+            <IconContext.Provider
+              value={{ size: '25px', color: 'var(--text-secondary)' }}
+            >
+              <FaBehance />
+            </IconContext.Provider>
           </a>
         </div>
       </div>
