@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Head from 'next/head'
-import Scroll from './Scroll'
+
 import { IconContext } from 'react-icons'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import styles from '../../styles/Layout.module.css'
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
         </div>
         <Navbar theme={theme} />
         <main className="main-container">{children}</main>
-        <Scroll theme={theme} />
+
         <Footer />
       </div>
     </>

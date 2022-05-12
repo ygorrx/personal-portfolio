@@ -13,8 +13,8 @@
 }
 
 .btn {
-    background: #1D1D1E;
-   color: #EFEFEF;
+   background: var(--background-2);
+   color: var(--text-secondary);
    line-height: 42px;
    padding: 0;
    border: none;
@@ -30,8 +30,8 @@
    position: absolute;
    content: "";
    height: 0%;
-   width: 2px;
-   background: #1D1D1E;
+   width: 3px;
+   background: var(--background-2);
  }
  .btn:before {
    right: 0;
@@ -44,7 +44,7 @@
    transition: all 500ms ease;
  }
  .btn:hover{
-   color: #1D1D1E;
+   color: var(--text-primary);
    background: transparent;
  }
  .btn:hover:before {
@@ -59,7 +59,7 @@
  .btn span:after {
    position: absolute;
    content: "";
-   background: #1D1D1E;
+   background: (--background-2);
  }
  .btn span:before {
    left: 0;
@@ -71,7 +71,7 @@
  .btn span:after {
    right: 0;
    bottom: 0;
-   width: 0%;
+   width: 5%;
    height: 2px;
    transition: all 500ms ease;
  }

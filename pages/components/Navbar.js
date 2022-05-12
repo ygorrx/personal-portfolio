@@ -41,7 +41,7 @@ const Navbar = ({ theme }) => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/Contact">
               <a>Contact</a>
             </Link>
           </li>

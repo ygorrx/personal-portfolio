@@ -37,6 +37,7 @@
     font-weight: 400;
     font-size: 1.7rem;
     line-height: 60px;
+    color: var(--text-primary);
 }
 
 .cards{
@@ -75,7 +76,7 @@
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  color: var(--primary-color);
+  color: var(--text-primary);
 }
 
 .card_body h1{

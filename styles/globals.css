@@ -43,7 +43,7 @@ a {
 
 .title{
   font-family: var(--type-first);
-  color: var(--primary-color);
+  color: var(--text-primary);
   font-weight: 900;
   line-height: 1;
   font-size: 4rem;
@@ -51,7 +51,7 @@ a {
  
   
 }
-
+/*
 .title::after{
   content: url(../public/assets/black-icons/arrow-down.svg);
   display: inline-block;
@@ -61,7 +61,7 @@ a {
   top: 1px;
   left: 280px;
 }
-
+*/
 .animeLeft{
   -webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
