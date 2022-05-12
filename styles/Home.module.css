@@ -58,6 +58,42 @@
   margin-right: 0.9em;
 }
 
+.icon_bg {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-left: 9px;
+  margin-right: 9px;
+  border-radius: 22.5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.icon_bg:after,
+.icon_bg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 22.5px;
+}
+
+.icon_expand:before {
+  box-shadow: inset 0 0 0 0px black;
+}
+
+.icon_expand:hover:before{
+  box-shadow: inset 0 0 0 45px black;
+}
+
 .image_home {
   width: 663px;
   height: 887px;
@@ -67,13 +103,49 @@
   grid-row-end: 7;
 }
 
-.image_scroll{
-  width: 50px;
-  height: 50px;
-  grid-column-start: 5; 
-  grid-column-end: 6;
-  grid-row-start: 7;
-  grid-row-end: 8;
-  background-color: (--background);
+.icon_scroll,
+.icon_scroll:before {
+    position: absolute;
+    left: 50%;
+    top: 110%;
 }
+
+
+.icon_scroll {
+    width: 30px;
+    height: 50px;
+    grid-column-start: 4; 
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    border: 2px solid var(--background-2);
+    border-radius: 25px
+}
+@media (max-width: 767px) {
+    .icon_scroll {
+        position: relative
+    }
+}
+.icon_scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--background-2);
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+@keyframes scroll {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(26px)
+    }
+}
+
 

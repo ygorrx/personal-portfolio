@@ -25,12 +25,15 @@ const Home = () => {
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-          >
+          > 
+             <div className={`${styles.icon_bg} ${styles.icon_expand}`}>
             <IconContext.Provider
               value={{ size: '25px', color: 'var(--text-primary)' }}
             >
               <FaMailBulk />
             </IconContext.Provider>
+            </div>
+            
           </a>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -85,6 +88,7 @@ const Home = () => {
             height="887"
           />
         </div>
+        <div className={styles.icon_scroll}></div>
       </div>
     </div>
   )
