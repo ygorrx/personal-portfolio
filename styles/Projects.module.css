@@ -23,15 +23,6 @@
     grid-row-end: 3;
 }
 
-.container_center h1::after{
-  content: url(../public/assets/black-icons/arrow-down.svg);
-  display: inline-block;
-  width: 1.875rem;
-  height: 1.875rem;
-  position: absolute;
-  top: 1px;
-  left: 250px;
-}
 
 .container_center p {
     font-weight: 400;

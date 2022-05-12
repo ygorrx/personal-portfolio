@@ -32,13 +32,15 @@
   .link_items a {
     color: var(--text-primary);
     text-decoration: none;
+    font-weight: 400;
     padding: 5px;
     transition: 0.4s;
     border-bottom: 2px solid transparent;
   }
   
   .link_items a:hover {
-    border-color: #fff;
+    border-color: var(--text-primary);
+    font-weight: 800;
   }
 
   .light_mode_button:hover{
