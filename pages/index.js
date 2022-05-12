@@ -26,13 +26,13 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           > 
-             <div className={`${styles.icon_bg} ${styles.icon_expand}`}>
+             
             <IconContext.Provider
               value={{ size: '25px', color: 'var(--text-primary)' }}
             >
               <FaMailBulk />
             </IconContext.Provider>
-            </div>
+           
             
           </a>
           <a
