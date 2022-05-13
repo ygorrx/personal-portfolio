@@ -23,12 +23,14 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
+  
 }
 
 .container_center p {
   font-weight: 400;
   font-size: 1.7rem;
   line-height: 60px;
+  color: var(--text-primary)
 }
 
 .text_long {
@@ -37,6 +39,7 @@
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 5;
+  color: var(--text-primary)
 }
 
 .text_long p {
@@ -76,6 +79,7 @@
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 30px;
+  color: var(--text-primary)
 }
 
 .techs li{
@@ -95,6 +99,7 @@
   font-family: var(--type-first);
   font-weight: 700;
   font-size: 1.7rem;
+  color: var(--text-primary)
 }
 
 .techs_1 {
@@ -110,6 +115,7 @@
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 30px;
+  color: var(--text-primary)
 }
 
 .techs_1 li{
@@ -135,6 +141,7 @@
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 30px;
+  color: var(--text-primary)
 }
 
 .techs_2 li{
@@ -152,6 +159,7 @@
   grid-row-start: 5;
   grid-row-end: 8;
   justify-content: end;
+  color: var(--text-primary)
 }
 
 .quote h1 {

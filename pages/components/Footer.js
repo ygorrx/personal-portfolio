@@ -7,6 +7,7 @@ import {
   FaInstagram
 } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
   return (
@@ -17,6 +18,9 @@ const Footer = () => {
           2022
         </p>
         <div className={styles.icons}>
+        <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -28,6 +32,10 @@ const Footer = () => {
               <FaMailBulk />
             </IconContext.Provider>
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -39,6 +47,10 @@ const Footer = () => {
               <FaGithub />
             </IconContext.Provider>
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -50,6 +62,10 @@ const Footer = () => {
               <FaLinkedinIn />
             </IconContext.Provider>
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -61,6 +77,10 @@ const Footer = () => {
               <FaInstagram />
             </IconContext.Provider>
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -72,6 +92,7 @@ const Footer = () => {
               <FaBehance />
             </IconContext.Provider>
           </a>
+          </motion.div>
         </div>
       </div>
     </footer>

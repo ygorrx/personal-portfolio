@@ -2,8 +2,9 @@ import '../styles/globals.css'
 import React from 'react'
 import Layout from './components/Layout'
 import Loading from './components/Loading'
+import {motion} from 'framer-motion'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
 
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
@@ -17,8 +18,26 @@ function MyApp({ Component, pageProps }) {
         
       ) : (
         <Layout>
+        <motion.div key={router.route} animate={{
+      x: 0,
+      opacity: 1
+    }}
+    initial={{
+      x: 100,
+      opacity: 0
+    }}
+    exit={{
+      x: -100,
+      opacity: 0,
+      ease: 'easeOut'
+    }}
+    transition={{
+      duration: 0.2,
+      ease: 'easeIn'
+    }}>
         <Component {...pageProps} />
-      </Layout>
+        </motion.div>
+        </Layout>
       )}
   </>
     )

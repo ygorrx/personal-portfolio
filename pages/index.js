@@ -8,19 +8,38 @@ import {
   FaInstagram
 } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import { motion, MotionConfig } from 'framer-motion'
 
 const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <div className={styles.text}>
+         <div className={styles.text}>
+         <motion.div initial="hidden" animate="visible" variants = {{
+          hidden: {
+            scale: .8,
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: .4
+            }
+          }
+        }}>
           <h2>
             <span>Hi, I am Ygor Moreira.</span> Welcome to my portfolio.
           </h2>
           <h1>Designer and Developer</h1>
           <p>Passionate about technology and it’s possibilities.</p>
+          </motion.div>
         </div>
+       
         <div className={styles.logos}>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -32,9 +51,12 @@ const Home = () => {
             >
               <FaMailBulk />
             </IconContext.Provider>
-           
-            
+                     
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -46,6 +68,10 @@ const Home = () => {
               <FaGithub />
             </IconContext.Provider>
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3,
+           }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -57,6 +83,10 @@ const Home = () => {
               <FaLinkedinIn />
             </IconContext.Provider>
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -68,6 +98,10 @@ const Home = () => {
               <FaInstagram />
             </IconContext.Provider>
           </a>
+          </motion.div>
+          <motion.div whileHover={{
+            scale: 1.3
+          }} whileTap={{ scale: 0.9 }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -79,14 +113,30 @@ const Home = () => {
               <FaBehance />
             </IconContext.Provider>
           </a>
+          </motion.div>
         </div>
         <div className={styles.image_home}>
+          <motion.div animate={{
+            filter: [
+              'hue-rotate(0)',
+              'hue-rotate(360deg)',
+              'hue-rotate(45deg)',
+              'hue-rotate(360deg)',
+              'hue-rotate(45deg)',
+              'hue-rotate(360deg)',
+              'hue-rotate(45deg)',
+              'hue-rotate(0)',
+            ]
+          }} transition={{
+            duration: 5, loop: Infinity, ease: "linear"
+          }}>
           <Image
             src="/assets/home-img.png"
             layout="responsive"
             width="663"
             height="887"
           />
+          </motion.div>
         </div>
         <div className={styles.icon_scroll}></div>
       </div>

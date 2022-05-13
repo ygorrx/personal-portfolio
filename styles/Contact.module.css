@@ -17,6 +17,10 @@
   padding-bottom: 6rem;
 }
 
+.container_center{
+  padding-top: 10.5rem;
+}
+
 .container_center p {
   grid-column-start: 1; 
   grid-column-end: 3;
@@ -80,7 +84,7 @@
   grid-row-start: 3;
   grid-row-end: 4;
   width: 70%;
-  height: 100%;
+  height: 70%;
   position: relative;
   object-fit: contain;
   justify-content: end;
