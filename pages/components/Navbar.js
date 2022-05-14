@@ -9,7 +9,6 @@ import { FaMoon, FaSun } from 'react-icons/fa'
 const Navbar = ({ theme, setTheme }) => {
   const { scrollY } = useViewportScroll()
 
-  /** this hook manages state **/
   const [hidden, setHidden] = React.useState(false)
 
   function update() {
@@ -25,11 +24,8 @@ const Navbar = ({ theme, setTheme }) => {
     return scrollY.onChange(() => update())
   })
 
-  /** add this const **/
   const variants = {
-    /** this is the "visible" key and it's correlating styles **/
     visible: { opacity: 1, y: 0 },
-    /** this is the "hidden" key and it's correlating styles **/
     hidden: { opacity: 0, y: -25 }
   }
 
