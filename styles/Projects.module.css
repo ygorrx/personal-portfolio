@@ -61,6 +61,7 @@
   height: 360px;
   position: relative;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .card_body {

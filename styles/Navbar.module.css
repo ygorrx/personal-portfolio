@@ -54,3 +54,14 @@
   .link_home{
     cursor: pointer;
   }
+
+  .button{
+    width: 100px;
+    height: 50px;
+    background-color: var(--background);
+    color: var(--text-primary);
+    border: none;
+    cursor: pointer;
+  }
+  
+ 
