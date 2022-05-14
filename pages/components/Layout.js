@@ -23,20 +23,7 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div data-theme={theme}>
-        <div className={styles.container}>
-          <button className={styles.button} onClick={switchTheme}>
-            {theme === 'light' ? (
-              <IconContext.Provider value={{ size: '25px', color: 'black' }}>
-                <FaMoon />
-              </IconContext.Provider>
-            ) : (
-              <IconContext.Provider value={{ size: '25px', color: 'white' }}>
-                <FaSun />
-              </IconContext.Provider>
-            )}
-          </button>
-        </div>
-        <Navbar theme={theme} />
+        <Navbar theme={theme} setTheme={setTheme} />
         <main className="main-container">{children}</main>
 
         <Footer />
