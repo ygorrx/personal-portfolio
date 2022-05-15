@@ -1,6 +1,8 @@
 import styles from '../styles/Projects.module.css'
 import Button from './components/Button'
 import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 const projectList = [
   {
@@ -41,38 +43,78 @@ const projectList = [
   }
 ]
 
+const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
+
+const thumbnailVariants = {
+  initial: { scale: 0.9, opacity: 1 },
+  enter: { scale: 1, opacity: 1, transition },
+  exit: {
+    scale: 0.5,
+    opacity: 0,
+    transition: { ...transition, duration: 1 }
+  }
+}
+
+const frameVariants = {
+  hover: { scale: 0.95 }
+}
+
 const Projects = () => {
   return (
     <div className={`animeLeft ${styles.container}`}>
-      <div className={styles.container_wrapper}>
-        <div className={styles.container_center}>
-          <h1 className="title">projects</h1>
-          <p>A collection of my recent works.</p>
-        </div>
-        <div className={styles.cards}>
-          {projectList.map((post, key) => {
-            return (
-              <div className={styles.card} key={key}>
-                <div className={styles.image_card}>
-                  <Image src={post.image} layout="fill" />
+      <AnimatePresence>
+        <motion.div
+          key="container"
+          className={styles.container_wrapper}
+          exit={{
+            scale: 0.5,
+            opacity: 0,
+            transition: { ...transition, duration: 1 }
+          }}
+        >
+          <div className={styles.container_center}>
+            <h1 className="title">projects</h1>
+            <p>A collection of my recent works.</p>
+          </div>
+          <div className={styles.cards}>
+            {projectList.map((post, key) => {
+              return (
+                <div className={styles.card} key={key}>
+                  <Link href="/single/Mypetz">
+                    <motion.div
+                      className={styles.image_card}
+                      initial={{ y: '50%', opacity: 0, scale: 0.5 }}
+                      animate={{ y: 0, opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, ease: 'easeIn' }}
+                      whileHover={{ scale: 1.1 }}
+                      exit={{
+                        scale: 0.5,
+                        opacity: 0,
+                        transition: { duration: 1 }
+                      }}
+                    >
+                      <Image src={post.image} layout="fill" />
+                    </motion.div>
+                  </Link>
+
+                  <div className={styles.card_body}>
+                    <h1>{post.title}</h1>
+                    <p>{post.description}</p>
+                    <p>
+                      <span>Techs: </span>
+                      {post.techs}
+                    </p>
+                  </div>
+                  <div className={styles.buttons}>
+                    <Button>See it Live!</Button>
+                    <Button>Github Repo</Button>
+                  </div>
                 </div>
-                <div className={styles.card_body}>
-                  <h1>{post.title}</h1>
-                  <p>{post.description}</p>
-                  <p>
-                    <span>Techs: </span>
-                    {post.techs}
-                  </p>
-                </div>
-                <div className={styles.buttons}>
-                  <Button>See it Live!</Button>
-                  <Button>Github Repo</Button>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
+              )
+            })}
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   )
 }
