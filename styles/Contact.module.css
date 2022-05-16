@@ -14,7 +14,7 @@
   display: grid; 
   grid-template-columns: 1.1fr 1.1fr; 
   grid-template-rows: 0.4fr 0.4fr 4fr; 
-  padding-bottom: 6rem;
+  
 }
 
 .container_center{
@@ -77,14 +77,14 @@
 }
 
 .image_card {
-  margin-top: 2rem;
+ 
   margin-left: 3rem;
   grid-column-start: 2; 
   grid-column-end: 3;
-  grid-row-start: 3;
+  grid-row-start: 2;
   grid-row-end: 4;
-  width: 70%;
-  height: 70%;
+  width: 800px;
+  height: 800px;
   position: relative;
   object-fit: contain;
   justify-content: end;
