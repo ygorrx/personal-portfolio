@@ -8,6 +8,7 @@ const projectList = [
   {
     id: 1,
     title: 'myPetz',
+    short: 'MyPetz',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
@@ -17,6 +18,7 @@ const projectList = [
   {
     id: 2,
     title: 'Harry Potter - Wizard World',
+    short: 'HarryPotter',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
@@ -26,6 +28,7 @@ const projectList = [
   {
     id: 3,
     title: 'Netflix clone',
+    short: 'Netflix',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
@@ -35,6 +38,7 @@ const projectList = [
   {
     id: 4,
     title: 'Netflix clone',
+    short: 'MyPetz',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
@@ -102,14 +106,9 @@ const Projects = () => {
                   <div className={styles.card_body}>
                     <h1>{post.title}</h1>
                     <p>{post.description}</p>
-                    <p>
-                      <span>Techs: </span>
-                      {post.techs}
-                    </p>
                   </div>
                   <div className={styles.buttons}>
-                    <Button>See it Live!</Button>
-                    <Button>Github Repo</Button>
+                  <Link href={`/single/${post.short}`}><Button>See the project!</Button></Link>
                   </div>
                 </div>
               )
