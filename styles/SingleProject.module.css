@@ -1,23 +1,100 @@
 .single {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--background);
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
-.image_card{
-  width: 100%;
+.video_card{
+  width: 100vw;
   height: 100vh;
   position: relative;
   object-fit: cover;
   
 }
 
+.text {
+  font-family: var(--type-first);
+  position:absolute;
+  top: 150px;
+  right: 210px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end; 
+  color: #ffffff;
+}
+
+.text h1 {
+  font-size: 7rem;
+}
+
 .back{
   position: absolute;
   top: 52px;
-  right: 50px;
-  font-size: 54px;
+  right: 210px;
+  font-size: 1.2rem;
+  font-family: var(--type-first);
   z-index: 1;
+  color: #ffffff;
+}
+
+.description {
+  max-width: 100rem;
+  width: 100rem;
+  height: 100%;
+  padding-bottom: 4rem;
+  font-family: var(--type-first);
+  background: var(--background);
+  color: var(--text-primary);
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.description h1 {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.description p{
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+
+.description h2 {
+  margin-top: 2rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  width:40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+.img_container {
+  max-width: 100rem;
+  width: 100rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.image_card {
+  width: 1600px;
+  height: 800px;
+  position: relative;
+  object-fit: contain;
+  margin-bottom: 2rem;
 }

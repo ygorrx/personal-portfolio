@@ -62,7 +62,7 @@ const frameVariants = {
 const Projects = () => {
   return (
     <div className={`animeLeft ${styles.container}`}>
-      <AnimatePresence>
+     
         <motion.div
           key="container"
           className={styles.container_wrapper}
@@ -76,12 +76,14 @@ const Projects = () => {
             <h1 className="title">projects</h1>
             <p>A collection of my recent works.</p>
           </div>
+          <AnimatePresence exitBeforeEnter>
           <div className={styles.cards}>
             {projectList.map((post, key) => {
               return (
                 <div className={styles.card} key={key}>
                   <Link href="/single/Mypetz">
                     <motion.div
+                      key={key}
                       className={styles.image_card}
                       initial={{ y: '50%', opacity: 0, scale: 0.5 }}
                       animate={{ y: 0, opacity: 1, scale: 1 }}
@@ -113,8 +115,9 @@ const Projects = () => {
               )
             })}
           </div>
+          </AnimatePresence>
         </motion.div>
-      </AnimatePresence>
+      
     </div>
   )
 }
