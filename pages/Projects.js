@@ -8,42 +8,42 @@ const projectList = [
   {
     id: 1,
     title: 'myPetz',
-    short: 'MyPetz',
+    short: 'Mypetz',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
       'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
-    techs: 'HTML, CSS, Javascript, React, Lottie, NPM'
+    techs: 'Web Development'
   },
   {
     id: 2,
     title: 'Harry Potter - Wizard World',
-    short: 'HarryPotter',
+    short: 'harrypotter',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
       'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
-    techs: 'HTML, CSS, Javascript, React, Lottie, NPM'
+    techs: 'Web Development | UI | UX'
   },
   {
     id: 3,
     title: 'Netflix clone',
-    short: 'Netflix',
+    short: 'netflix',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
       'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
-    techs: 'HTML, CSS, Javascript'
+    techs: 'Web Development'
   },
   {
     id: 4,
-    title: 'Netflix clone',
-    short: 'MyPetz',
+    title: 'Black Mirror',
+    short: 'blackmirror',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
     image:
       'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
-    techs: 'HTML, CSS, Javascript'
+    techs: 'UI | UX'
   }
 ]
 
@@ -85,7 +85,7 @@ const Projects = () => {
             {projectList.map((post, key) => {
               return (
                 <div className={styles.card} key={key}>
-                  <Link href="/single/Mypetz">
+                  <Link href={`/single/${post.short}`} as={`/projects/${post.short}`} passHref>
                     <motion.div
                       key={key}
                       className={styles.image_card}
@@ -102,13 +102,15 @@ const Projects = () => {
                       <Image src={post.image} layout="fill" />
                     </motion.div>
                   </Link>
-
+                  <div className={styles.card_container}>
                   <div className={styles.card_body}>
                     <h1>{post.title}</h1>
                     <p>{post.description}</p>
+                    <p><span>{post.techs}</span></p>
                   </div>
                   <div className={styles.buttons}>
-                  <Link href={`/single/${post.short}`}><Button>See the project!</Button></Link>
+                  <Link href={`/single/${post.short}`} as={`/projects/${post.short}`} passHref><Button>See the project!</Button></Link>
+                  </div>
                   </div>
                 </div>
               )
