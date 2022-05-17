@@ -60,9 +60,9 @@ const Mypetz = () => {
           <h1>about the project: myPetz</h1>
           <p>Origamid's React course project completion inspired the creation of myPetz. The task was to construct an app that uses the course's API to allow you to utilize the site as a social network where you can publish, comment on, and browse images of your pets and other’s. The API allows the data to last 10 minutes on the server, so that’s the max. amount of time your photo is going to be on your profile.</p>
           <h2>Features</h2>
-          <p>User Creation/Login/Password Loss | Posting photos/comments | View statistics of your photos;</p>
+          <p>✔️ User Creation/Login/Password Loss | ✔️ Posting photos/comments | ✔️ View statistics of your photos</p>
           <h2>Techs Used</h2>
-          <p>ReactJs | CSS Modules | Fetch API | Custom Hooks | Lottie | Victory</p>
+          <p>ReactJs | CSS Modules | Fetch API | Custom Hooks | Lottie | Victory | NPM </p>
           <div className={styles.buttons}>
                     <Button>See it Live!</Button>
                     <Button>Github Repo</Button>
