@@ -98,3 +98,17 @@
   object-fit: contain;
   margin-bottom: 2rem;
 }
+
+.image_card2{
+  width: 357px;
+  height: 852px;
+  position: relative;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+}
+
+.containerImg{
+  display: flex;
+  justify-content: center;
+}
