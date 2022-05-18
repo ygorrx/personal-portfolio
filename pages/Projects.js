@@ -11,38 +11,34 @@ const projectList = [
     short: 'Mypetz',
     description: 'A social media for your petz.',
     date: '12 February, 2022',
-    image:
-      'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
+    image: 'https://i.imgur.com/oFdUdwd.png',
     techs: 'Web Development'
   },
   {
     id: 2,
     title: 'Harry Potter - Wizard World',
     short: 'harrypotter',
-    description: 'A social media for your petz.',
+    description: 'Website for the Wizard World.',
     date: '12 February, 2022',
-    image:
-      'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
+    image: 'https://i.imgur.com/GByhQ3t.png',
     techs: 'Web Development | UI | UX'
   },
   {
     id: 3,
     title: 'Netflix clone',
     short: 'netflix',
-    description: 'A social media for your petz.',
+    description: "A simple Netflix's Interface clone.",
     date: '12 February, 2022',
-    image:
-      'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
+    image: 'https://i.imgur.com/XNHWgNO.png',
     techs: 'Web Development'
   },
   {
     id: 4,
     title: 'Black Mirror',
     short: 'blackmirror',
-    description: 'A social media for your petz.',
+    description: 'UI for a Black Mirror based Website.',
     date: '12 February, 2022',
-    image:
-      'https://www.mypetbrasil.com/blog/wp-content/uploads/2020/02/Aumente-as-vendas-no-seu-Pet-Shop.jpg',
+    image: 'https://i.imgur.com/jxmiJ9b.png',
     techs: 'UI | UX'
   }
 ]
@@ -66,26 +62,29 @@ const frameVariants = {
 const Projects = () => {
   return (
     <div className={`animeLeft ${styles.container}`}>
-     
-        <motion.div
-          key="container"
-          className={styles.container_wrapper}
-          exit={{
-            scale: 0.5,
-            opacity: 0,
-            transition: { ...transition, duration: 1 }
-          }}
-        >
-          <div className={styles.container_center}>
-            <h1 className="title">projects</h1>
-            <p>A collection of my recent works.</p>
-          </div>
-          <AnimatePresence exitBeforeEnter>
+      <motion.div
+        key="container"
+        className={styles.container_wrapper}
+        exit={{
+          scale: 0.5,
+          opacity: 0,
+          transition: { ...transition, duration: 1 }
+        }}
+      >
+        <div className={styles.container_center}>
+          <h1 className="title">projects</h1>
+          <p>A collection of my recent works.</p>
+        </div>
+        <AnimatePresence exitBeforeEnter>
           <div className={styles.cards}>
             {projectList.map((post, key) => {
               return (
                 <div className={styles.card} key={key}>
-                  <Link href={`/single/${post.short}`} as={`/projects/${post.short}`} passHref>
+                  <Link
+                    href={`/single/${post.short}`}
+                    as={`/projects/${post.short}`}
+                    passHref
+                  >
                     <motion.div
                       key={key}
                       className={styles.image_card}
@@ -103,22 +102,29 @@ const Projects = () => {
                     </motion.div>
                   </Link>
                   <div className={styles.card_container}>
-                  <div className={styles.card_body}>
-                    <h1>{post.title}</h1>
-                    <p>{post.description}</p>
-                    <p><span>{post.techs}</span></p>
-                  </div>
-                  <div className={styles.buttons}>
-                  <Link href={`/single/${post.short}`} as={`/projects/${post.short}`} passHref><Button>See the project!</Button></Link>
-                  </div>
+                    <div className={styles.card_body}>
+                      <h1>{post.title}</h1>
+                      <p>{post.description}</p>
+                      <p>
+                        <span>{post.techs}</span>
+                      </p>
+                    </div>
+                    <div className={styles.buttons}>
+                      <Link
+                        href={`/single/${post.short}`}
+                        as={`/projects/${post.short}`}
+                        passHref
+                      >
+                        <Button>See the project!</Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )
             })}
           </div>
-          </AnimatePresence>
-        </motion.div>
-      
+        </AnimatePresence>
+      </motion.div>
     </div>
   )
 }
