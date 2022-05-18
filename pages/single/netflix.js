@@ -28,8 +28,6 @@ const netflix = () => {
     <div className={styles.single}>
       <AnimatePresence exitBeforeEnter>
         <motion.div
-          
-          
           initial={{ y: '50%', opacity: 0, transition: 0.5 }}
           animate={{
             y: '0%',
@@ -38,16 +36,18 @@ const netflix = () => {
           transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
           exit={{ y: '50%', opacity: 0, transition: { duration: 0.5 } }}
         >
-          <video autoPlay muted className={styles.video_card}>         
-            <source src="/assets/header-netflix.mp4" type="video/mp4"/>       
+          <video autoPlay muted className={styles.video_card}>
+            <source src="/assets/header-netflix.mp4" type="video/mp4" />
           </video>
           {/* <Image src="/assets/images/petz.jpg" layout="fill" /> */}
-          <motion.div className={styles.text}
-          initial={{ opacity: 0}}
-          animate={{
-            opacity: 1, transition: 2 
-          }}
-        >
+          <motion.div
+            className={styles.text}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: 2
+            }}
+          >
             <h1>Netflix</h1>
             <h2>A simple clone of Netflix's website.</h2>
           </motion.div>
@@ -57,33 +57,35 @@ const netflix = () => {
         </motion.div>
       </AnimatePresence>
       <div className={styles.description}>
-          <h1>about the project: Netflix</h1>
-          <p>This website was developed for a study case. I deciced to choose a random API from the repo: <a>https://github.com/public-apis/public-apis</a>. The one I choose was the Harry Potter one, who had some info about the characters. After that, I planned the whole website to fit the use of the API. I made everything, from the design to the animations.
-I had to fork the original API to make changes too, like adding images do the data I wanted to use.</p>
-          <h2>Features</h2>
-          <p>✔️ API consumption | ✔️ Filtering/Pagination | ✔️ Modals and Animations;</p>
-          <h2>Techs Used</h2>
-          <p>ReactJs | CSS Modules | Axios | Custom Hooks | Lottie | NPM | Heroku | Netlify | Express</p>
-          <div className={styles.buttons}>
-                    <Button>See it Live!</Button>
-                    <Button>Github Repo</Button>
-          </div>
-          <h2>Some screenshots:</h2>
+        <h1>about the project: Netflix</h1>
+        <p>
+          This is a solution to the challenge proposed in DIO's Inter Bootcamp
+          to recreate Netflix's initial interface. The interface is not 100%
+          faithful to the original, we were free to adapt as we wanted.
+        </p>
+        <h2>Features</h2>
+        <p>✔️ Carousel | ✔️ Responsiveness</p>
+        <h2>Techs Used</h2>
+        <p>HTML | CSS | Vanilla Javascript | Jquery</p>
+        <div className={styles.buttons}>
+          <Button>See it Live!</Button>
+          <Button>Github Repo</Button>
         </div>
-        <div className={styles.img_container}>
+        <h2>Some screenshots:</h2>
+      </div>
+      <div className={styles.img_container}>
         <div className={styles.image_card}>
-            <Image src="/assets/screenshots-net/home2.png" layout="fill" />                
+          <Image src="/assets/screenshots-net/home2.png" layout="fill" />
         </div>
         <div className={styles.containerImg}>
-        <div className={styles.image_card2}>
-            <Image src="/assets/screenshots-net/tablet.png" layout="fill" />                
+          <div className={styles.image_card2}>
+            <Image src="/assets/screenshots-net/tablet.png" layout="fill" />
+          </div>
+          <div className={styles.image_card2}>
+            <Image src="/assets/screenshots-net/mobile.png" layout="fill" />
+          </div>
         </div>
-        <div className={styles.image_card2}>
-            <Image src="/assets/screenshots-net/mobile.png" layout="fill" />                
-        </div>
-        </div>
-        
-        </div>
+      </div>
     </div>
   )
 }
