@@ -16,29 +16,29 @@ function MyApp({ Component, pageProps, router }) {
         <Loading />
       ) : (
         <Layout>
-          <AnimatePresence exitBeforeEnter >
-          <motion.div
+          <AnimatePresence exitBeforeEnter>
+            <motion.div
               key={router.asPath}
               animate={{
-              x: 0,
-              opacity: 1
-            }}
-            initial={{
-              x: 100,
-              opacity: 0
-            }}
-            exit={{
-              x: -100,
-              opacity: 0,
-              ease: 'easeOut'
-            }}
-            transition={{
-              duration: 0.2,
-              ease: 'easeIn'
-            }}
-          >
-            <Component {...pageProps} key={router.asPath}/>
-          </motion.div>
+                x: 0,
+                opacity: 1
+              }}
+              initial={{
+                x: 100,
+                opacity: 0
+              }}
+              exit={{
+                x: -100,
+                opacity: 0,
+                ease: 'easeOut'
+              }}
+              transition={{
+                duration: 0.2,
+                ease: 'easeIn'
+              }}
+            >
+              <Component {...pageProps} key={router.asPath} />
+            </motion.div>
           </AnimatePresence>
         </Layout>
       )}
