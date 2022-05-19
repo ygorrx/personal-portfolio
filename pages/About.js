@@ -1,15 +1,28 @@
 import styles from '../styles/About.module.css'
 import Image from 'next/image'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+import Button from './components/Button'
 
 const About = () => {
+
+const { ref: myProject, inView: myProjectVisible } = useInView()
+const { ref: myProject2, inView: myProjectVisible2 } = useInView()
+
   return (
     <div className={`animeLeft ${styles.container}`}>
       <div className={styles.container_wrapper}>
-        <div className={styles.container_center}>
+        <motion.div className={styles.container_center}
+        initial={{ y: '50%', opacity: 0, scale: 0.5 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3, ease: 'easeIn' }}>
           <h1 className="title">about me</h1>
           <p>Little facts about myself.</p>
-        </div>
-        <div className={styles.text_long}>
+        </motion.div>
+        <motion.div className={styles.text_long}
+        initial={{ y: '50%', opacity: 0, scale: 0.5 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3, ease: 'easeIn' }}>
           <p>
             Hello. My name is <span>Ygor Moreira</span>, and I’m from Brasil. I
             have a Bachelor degree in Digital Systems and Media by the Federal
@@ -25,16 +38,18 @@ const About = () => {
             such as marketing, user interface and user experience. Now that I'm
             back in the development world, I see no better way to do it than to
             apply the skills I've gained in the field with which I'm most
-            familiar, <span>Frontend Web Development</span>. {'\n'} I am a
+            familiar, <span>Frontend Web Development</span>. <br/> I am a
             dedicated individual who is intrigued and eager to constantly
             provide my best effort to whatever task is assigned to me. If
             there's something I don't know, I'll figure out how to learn it.
           </p>
-        </div>
+        </motion.div>
         <div className={styles.image_card}>
           <Image src="/assets/foto-port.png" layout="fill" />
         </div>
-        <div className={styles.text_title}>
+        <div ref={myProject} className={`${styles.text_title} ${
+          myProjectVisible ? 'textTitleAnimate' : ''
+        }`}>
           <h2>Tools and technologies that I use</h2>
         </div>
         <ul className={styles.techs}>
@@ -69,6 +84,12 @@ const About = () => {
             and the day you find out why."
           </h1>
           <p>– Mark Twain</p>
+        </div>
+        <div ref={myProject2} className={`${styles.text_title_2} ${
+          myProjectVisible2 ? 'textTitleAnimate' : ''
+        }`}>
+          <h2>Download my resume</h2>
+          <Button>Click here!</Button>
         </div>
       </div>
     </div>

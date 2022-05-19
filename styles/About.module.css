@@ -13,7 +13,7 @@
   padding: 0 1.2rem;
   display: grid; 
   grid-template-columns: 0.8fr 0.7fr 0.8fr 0.9fr 1.8fr 0.4fr; 
-  grid-template-rows:   0.6fr 1.1fr 0.8fr 0.8fr 0.2fr 0.2fr 2.8fr; ; 
+  grid-template-rows:   0.6fr 1.1fr 0.8fr 0.8fr 0.2fr 0.2fr 1.8fr 1.1fr;  
   
 }
 
@@ -102,6 +102,7 @@
   color: var(--text-primary)
 }
 
+
 .techs_1 {
   list-style: none;
   grid-column-start: 2; 
@@ -175,3 +176,16 @@
   text-align: right;
   line-height: 70px;
 }
+
+.text_title_2{
+  grid-column-start: 1; 
+  grid-column-end: 4;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  font-family: var(--type-first);
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--text-primary)
+}
+
+ 
