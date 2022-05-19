@@ -5,9 +5,11 @@ import styles from '../../styles/Navbar.module.css'
 import { motion, useViewportScroll } from 'framer-motion'
 import { IconContext } from 'react-icons'
 import { FaMoon, FaSun } from 'react-icons/fa'
+import { useRouter } from 'next/router'
 
 const Navbar = ({ theme, setTheme }) => {
   const { scrollY } = useViewportScroll()
+  const router = useRouter();
 
   const [hidden, setHidden] = React.useState(false)
 
@@ -68,17 +70,17 @@ const Navbar = ({ theme, setTheme }) => {
           <ul className={styles.link_items}>
             <li>
               <Link href="/Projects">
-                <a>Projects</a>
+                <a className={router.pathname == "/Projects" ? "active" : ""}>Projects</a>
               </Link>
             </li>
             <li>
               <Link href="/About">
-                <a>About</a>
+                <a className={router.pathname == "/About" ? "active" : ""}>About</a>
               </Link>
             </li>
             <li>
               <Link href="/Contact">
-                <a>Contact</a>
+                <a className={router.pathname == "/Contact" ? "active" : ""}>Contact</a>
               </Link>
             </li>
             <button className={styles.button} onClick={switchTheme}>
