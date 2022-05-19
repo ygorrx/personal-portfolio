@@ -1,10 +1,9 @@
 import React from 'react'
-import { content } from '../components/content'
 import styles from '../../styles/ProjectSolo.module.css'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import Button from './Button'
+import { useInView } from 'react-intersection-observer'
 
 const projectList = [
   {
@@ -28,25 +27,17 @@ const projectList = [
 ]
 
 const ProjectSolo = () => {
+  const { ref: myProject, inView: myProjectVisible } = useInView()
+
   return (
-    <div className={`animeLeft ${styles.container}`}>
-      <motion.div className={styles.container_wrapper}>
-        <motion.div
-          initial={{ y: 200, opacity: 0 }}
-          whileInView={{
-            y: 20,
-            opacity: 1,
-            transition: {
-              type: 'spring',
-              bounce: 0.4,
-              duration: 1
-            }
-          }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
-          className={styles.container_center}
-        >
-          <h1 className="title">recent projects</h1>
+    <div ref={myProject} className={styles.container}>
+      <motion.div
+        className={`${styles.container_wrapper} ${
+          myProjectVisible ? 'introProject' : ''
+        }`}
+      >
+        <motion.div className={styles.container_center}>
+          <h1 className="title-2">recent projects</h1>
           <p>my latest experiments.</p>
         </motion.div>
         <div className={styles.cards}>
@@ -74,19 +65,33 @@ const ProjectSolo = () => {
                     <Image src={post.image} layout="fill" />
                   </motion.div>
                 </Link>
-                <div className={styles.card_container}>
-                  <div className={styles.card_body}>
-                    <h1>{post.title}</h1>
-                    <p>{post.description}</p>
-                    <p>
-                      <span>{post.techs}</span>
-                    </p>
+                <Link
+                  href={`/single/${post.short}`}
+                  as={`/projects/${post.short}`}
+                  passHref
+                >
+                  <div className={styles.card_container}>
+                    <div className={styles.card_body}>
+                      <h1>{post.title}</h1>
+                      <p>{post.description}</p>
+                      <p>
+                        <span>{post.techs}</span>
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             )
           })}
         </div>
+        <motion.div
+          className={styles.back}
+          initial={{ opacity: 0, y: 200 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link href="/Projects">See all projects →</Link>
+        </motion.div>
       </motion.div>
     </div>
   )
