@@ -89,7 +89,11 @@ const { ref: myProject2, inView: myProjectVisible2 } = useInView()
           myProjectVisible2 ? 'textTitleAnimate' : ''
         }`}>
           <h2>Download my resume</h2>
-          <Button>Click here!</Button>
+              <a
+                href="https://drive.google.com/file/d/1gFZn9TknK_OEtUhLlseTG1kLUm5s77EA/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>Click here!</Button></a>
         </div>
       </div>
     </div>

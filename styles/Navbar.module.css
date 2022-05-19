@@ -16,7 +16,7 @@
     padding: 1em 1.2em;
     color: var(--text-primary);
     font-family: var(--type-first);
-    font-weight: 300;
+    
 }
 
 .link_items {
@@ -32,7 +32,6 @@
   .link_items a {
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 400;
     padding: 5px;
     transition: 0.4s;
     border-bottom: 2px solid transparent;

@@ -129,4 +129,7 @@ a {
   }
 }
 
-
+.active {
+  border-color: var(--text-primary);
+  font-weight: 800;
+}
