@@ -165,7 +165,9 @@ const Home = () => {
           <div className={styles.icon_scroll}></div>
         </div>
       </div>
-      <ProjectSolo />
+      <div>
+        <ProjectSolo />
+      </div>
     </>
   )
 }

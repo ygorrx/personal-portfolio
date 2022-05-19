@@ -5,6 +5,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--background);
   
 }
 
@@ -50,9 +51,16 @@ a {
   line-height: 1;
   font-size: 4rem;
   position: relative;
- 
-  
-}
+ }
+
+ .title-2{
+  font-family: var(--type-first);
+  color: var(--text-secondary);
+  font-weight: 900;
+  line-height: 1;
+  font-size: 4rem;
+  position: relative;
+ }
 
 .animeLeft{
   -webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -81,5 +89,24 @@ a {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+  }
+}
+
+.introProject {
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 0;
+  } 50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+            opacity: 1;
   }
 }

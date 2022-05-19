@@ -4,7 +4,8 @@
   background-color: var(--background);
   display: flex;
   justify-content: center;
-}
+  margin-bottom: 2rem;
+  }
 
 .main {
   display: grid; 
@@ -16,7 +17,7 @@
   height: 100vh;
   color: var(--text-primary);
   font-family: var(--type-first);
-  padding-bottom: 1.5rem;
+  padding-bottom: 5rem;
 }
 
 .text {
@@ -111,5 +112,6 @@
         transform: translateY(26px)
     }
 }
+
 
 
