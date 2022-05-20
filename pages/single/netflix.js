@@ -68,8 +68,16 @@ const netflix = () => {
         <h2>Techs Used</h2>
         <p>HTML | CSS | Vanilla Javascript | Jquery</p>
         <div className={styles.buttons}>
-          <Button>See it Live!</Button>
-          <Button>Github Repo</Button>
+        <a
+                href="https://netflix-alike.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>See it Live!</Button></a>
+          <a
+                href="https://github.com/ygorrx/clone-netflix"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>Github Repo</Button></a>
         </div>
         <h2>Some screenshots:</h2>
       </div>

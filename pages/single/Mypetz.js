@@ -77,8 +77,16 @@ const Mypetz = () => {
           NPM{' '}
         </p>
         <div className={styles.buttons}>
-          <Button>See it Live!</Button>
-          <Button>Github Repo</Button>
+        <a
+                href="https://mypetz.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>See it Live!</Button></a>
+               <a
+                href="https://github.com/ygorrx/animals"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>Github Repo</Button></a>
         </div>
         <h2>Some screenshots:</h2>
       </div>

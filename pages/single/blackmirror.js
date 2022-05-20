@@ -59,28 +59,23 @@ const blackmirror = () => {
       <div className={styles.description}>
         <h1>about the project: Black Mirror</h1>
         <p>
-          This website was developed for a study case. I deciced to choose a
-          random API from the repo:{' '}
-          <a>https://github.com/public-apis/public-apis</a>. The one I choose
-          was the Harry Potter one, who had some info about the characters.
-          After that, I planned the whole website to fit the use of the API. I
-          made everything, from the design to the animations. I had to fork the
-          original API to make changes too, like adding images do the data I
-          wanted to use.
+        This concept brings the atmosphere of Black Mirror into its own website. The prototype seeks to provide users with more information about the series, including character profiles and cast information for each episode, as well as the ability to watch it.
         </p>
         <h2>Features</h2>
         <p>
-          ✔️ API consumption | ✔️ Filtering/Pagination | ✔️ Modals and
-          Animations;
+          ✔️ Characters Description | ✔️ Episodes Selection | ✔️ Media Player
+          
         </p>
         <h2>Techs Used</h2>
         <p>
-          ReactJs | CSS Modules | Axios | Custom Hooks | Lottie | NPM | Heroku |
-          Netlify | Express
+          Adobe XD | Adobe Photoshop | Adobe After Effects
         </p>
         <div className={styles.buttons}>
-          <Button>See it Live!</Button>
-          <Button>Github Repo</Button>
+        <a
+                href="https://www.behance.net/gallery/76592959/Black-Mirror-Website-Concept"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>See the full project!</Button></a>
         </div>
         <h2>Some screenshots:</h2>
       </div>

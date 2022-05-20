@@ -65,8 +65,16 @@ I had to fork the original API to make changes too, like adding images do the da
           <h2>Techs Used</h2>
           <p>ReactJs | CSS Modules | Axios | Custom Hooks | Lottie | NPM | Heroku | Netlify | Express</p>
           <div className={styles.buttons}>
-                    <Button>See it Live!</Button>
-                    <Button>Github Repo</Button>
+          <a
+                href="harrypotterwom.netlify.app/#/"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>See it Live!</Button></a>
+              <a
+                href="https://github.com/ygorrx/hpteste"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><Button>Github Repo</Button></a>
           </div>
           <h2>Some screenshots:</h2>
         </div>
