@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../../styles/SingleProject.module.css'
 import Link from 'next/link'
 import Button from '../components/Button'
+import Head from 'next/head'
 
 const transition = {
   duration: 1,
@@ -25,6 +26,11 @@ const backVariants = {
 
 const myPetz = () => {
   return (
+    <>
+    <Head>
+        <title>Ygor Moreira | Projects | Harry Potter</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <div className={styles.single}>
       <AnimatePresence exitBeforeEnter>
         <motion.div
@@ -93,6 +99,7 @@ I had to fork the original API to make changes too, like adding images do the da
         </div>
         </div>
     </div>
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import Button from './components/Button'
+import Head from 'next/head'
 
 const About = () => {
 
@@ -10,6 +11,11 @@ const { ref: myProject, inView: myProjectVisible } = useInView()
 const { ref: myProject2, inView: myProjectVisible2 } = useInView()
 
   return (
+    <>
+    <Head>
+        <title>Ygor Moreira | About</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <div className={`animeLeft ${styles.container}`}>
       <div className={styles.container_wrapper}>
         <motion.div className={styles.container_center}
@@ -97,6 +103,7 @@ const { ref: myProject2, inView: myProjectVisible2 } = useInView()
         </div>
       </div>
     </div>
+    </>
   )
 }
 

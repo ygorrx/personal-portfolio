@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { content } from './components/content'
+import Head from 'next/head'
 
 const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
 
@@ -23,6 +24,11 @@ const frameVariants = {
 
 const Projects = () => {
   return (
+    <>
+    <Head>
+        <title>Ygor Moreira | Projects</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <div className={`animeLeft ${styles.container}`}>
       <motion.div
         key="container"
@@ -88,6 +94,7 @@ const Projects = () => {
         </AnimatePresence>
       </motion.div>
     </div>
+    </>
   )
 }
 

@@ -1,9 +1,15 @@
 import styles from '../styles/Contact.module.css'
 import Button from './components/Button'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const Contact = () => {
   return (
+    <>
+    <Head>
+        <title>Ygor Moreira | Contact</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <div className={`animeLeft ${styles.container}`}>
       <div className={styles.container_wrapper}>
         <div className={styles.container_center}>
@@ -52,6 +58,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -10,10 +10,15 @@ import {
 import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion'
 import ProjectSolo from './components/ProjectSolo'
+import Head from 'next/head'
 
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>Ygor Moreira | Portfolio</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className={styles.container}>
         <div className={styles.main}>
           <div className={styles.text}>
