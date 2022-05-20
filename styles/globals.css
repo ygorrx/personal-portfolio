@@ -102,7 +102,7 @@ a {
             transform: translateY(0);
             opacity: 0;
   } 50% {
-    opacity: 0.5;
+    opacity: 0.3;
   }
   100% {
     -webkit-transform: translateY(-100px);
