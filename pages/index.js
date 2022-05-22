@@ -11,8 +11,15 @@ import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion'
 import ProjectSolo from './components/ProjectSolo'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import en from '../public/locales/en/en'
+import pt from '../public/locales/pt/pt'
 
 const Home = () => {
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === 'en' ? en : pt
+
   return (
     <>
       <Head>
@@ -40,10 +47,10 @@ const Home = () => {
               }}
             >
               <h2>
-                <span>Hi, I am Ygor Moreira.</span> Welcome to my portfolio.
+                <span>{t.homeH1}</span> {t.homeH1_2}
               </h2>
-              <h1>Designer and Developer</h1>
-              <p>Passionate about technology and it’s possibilities.</p>
+              <h1>{t.homeH1_3}</h1>
+              <p>{t.homep1}</p>
             </motion.div>
           </div>
 

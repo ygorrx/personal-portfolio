@@ -63,4 +63,13 @@
     cursor: pointer;
   }
   
- 
+ .selector{
+   color: var(--text-primary);
+   font-family: var(--type-first);
+   background-color: var(--background);
+   border: none;
+ }
+
+ .selector option {
+   width: 40px;
+ }

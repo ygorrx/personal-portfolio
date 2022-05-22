@@ -6,10 +6,14 @@ import { motion, useViewportScroll } from 'framer-motion'
 import { IconContext } from 'react-icons'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { useRouter } from 'next/router'
+import en from '../../public/locales/en/en'
+import pt from '../../public/locales/pt/pt'
 
 const Navbar = ({ theme, setTheme }) => {
   const { scrollY } = useViewportScroll()
-  const router = useRouter();
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === 'en' ? en : pt
 
   const [hidden, setHidden] = React.useState(false)
 
@@ -34,6 +38,12 @@ const Navbar = ({ theme, setTheme }) => {
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
+  }
+
+  const changeLanguage = (e) => {
+    const locale = e.target.value
+    const path = locale + router.pathname
+    router.replace(path, path, { locale })
   }
 
   return (
@@ -70,17 +80,23 @@ const Navbar = ({ theme, setTheme }) => {
           <ul className={styles.link_items}>
             <li>
               <Link href="/Projects">
-                <a className={router.pathname == "/Projects" ? "active" : ""}>Projects</a>
+                <a className={router.pathname == '/Projects' ? 'active' : ''}>
+                  {t.nav1}
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/About">
-                <a className={router.pathname == "/About" ? "active" : ""}>About</a>
+                <a className={router.pathname == '/About' ? 'active' : ''}>
+                  {t.nav2}
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/Contact">
-                <a className={router.pathname == "/Contact" ? "active" : ""}>Contact</a>
+                <a className={router.pathname == '/Contact' ? 'active' : ''}>
+                  {t.nav3}
+                </a>
               </Link>
             </li>
             <button className={styles.button} onClick={switchTheme}>
@@ -94,6 +110,30 @@ const Navbar = ({ theme, setTheme }) => {
                 </IconContext.Provider>
               )}
             </button>
+            <select
+              onChange={changeLanguage}
+              defaultValue={locale}
+              className={styles.selector}
+            >
+              <option value="en">
+                <Image
+                  src="/assets/usflag.svg"
+                  width="15"
+                  height="15"
+                  alt="usflag"
+                ></Image>
+                EN
+              </option>
+              <option value="pt">
+                <Image
+                  src="/assets/brflag.svg"
+                  width="15"
+                  height="15"
+                  alt="brflag"
+                ></Image>
+                PT
+              </option>
+            </select>
           </ul>
         </div>
       </motion.nav>
