@@ -3,17 +3,8 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import Head from 'next/head'
 
-import { IconContext } from 'react-icons'
-import { FaMoon, FaSun } from 'react-icons/fa'
-import styles from '../../styles/Layout.module.css'
-
 const Layout = ({ children }) => {
   const [theme, setTheme] = React.useState('light')
-
-  const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-  }
 
   return (
     <>
