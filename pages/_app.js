@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from './components/Layout'
 import Loading from './components/Loading'
 import { motion, AnimatePresence } from 'framer-motion'
-import { appWithTranslation } from 'next-i18next'
+
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = React.useState(true)
@@ -47,4 +47,4 @@ function MyApp({ Component, pageProps, router }) {
   )
 }
 
-export default appWithTranslation(MyApp)
+export default MyApp

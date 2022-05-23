@@ -9,8 +9,8 @@ import {
 import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-import en from '../public/locales/en/en'
-import pt from '../public/locales/pt/pt'
+import en from '../../public/locales/en/en'
+import pt from '../../public/locales/pt/pt'
 
 const Footer = () => {
   const router = useRouter()
