@@ -3,26 +3,21 @@ import Button from './components/Button'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { content } from './components/content'
+import { contentEnglish } from './components/contentEnglish'
+import { contentPT } from './components/contentPT'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import en from '../public/locales/en/en'
+import pt from '../public/locales/pt/pt'
 
 const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
 
-const thumbnailVariants = {
-  initial: { scale: 0.9, opacity: 1 },
-  enter: { scale: 1, opacity: 1, transition },
-  exit: {
-    scale: 0.5,
-    opacity: 0,
-    transition: { ...transition, duration: 1 }
-  }
-}
-
-const frameVariants = {
-  hover: { scale: 0.95 }
-}
-
 const Projects = () => {
+
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === 'en' ? en : pt 
+
   return (
     <>
     <Head>
@@ -40,12 +35,13 @@ const Projects = () => {
         }}
       >
         <div className={styles.container_center}>
-          <h1 className="title">projects</h1>
-          <p>A collection of my recent works.</p>
+          <h1 className="title">{t.project1}</h1>
+          <p>{t.project2}</p>
         </div>
         <AnimatePresence exitBeforeEnter>
+        {locale === 'en'? (
           <div className={styles.cards}>
-            {content.map((post, key) => {
+             {contentEnglish.map((post, key) => {
               return (
                 <div className={styles.card} key={key}>
                   <Link
@@ -83,14 +79,62 @@ const Projects = () => {
                         as={`/projects/${post.short}`}
                         passHref
                       >
-                        <Button>See the project!</Button>
+                        <Button>{t.project_button}</Button>
                       </Link>
                     </div>
                   </div>
                 </div>
               )
             })}
-          </div>
+            </div>):(
+              <div className={styles.cards}>
+              {contentPT.map((post, key) => {
+               return (
+                 <div className={styles.card} key={key}>
+                   <Link
+                     href={`/single/${post.short}`}
+                     as={`/projects/${post.short}`}
+                     passHref
+                   >
+                     <motion.div
+                       key={key}
+                       className={styles.image_card}
+                       initial={{ y: '50%', opacity: 0, scale: 0.5 }}
+                       animate={{ y: 0, opacity: 1, scale: 1 }}
+                       transition={{ duration: 0.3, ease: 'easeIn' }}
+                       whileHover={{ scale: 1.1 }}
+                       exit={{
+                         scale: 0.5,
+                         opacity: 0,
+                         transition: { duration: 1 }
+                       }}
+                     >
+                       <Image src={post.image} layout="fill" />
+                     </motion.div>
+                   </Link>
+                   <div className={styles.card_container}>
+                     <div className={styles.card_body}>
+                       <h1>{post.title}</h1>
+                       <p>{post.description}</p>
+                       <p>
+                         <span>{post.techs}</span>
+                       </p>
+                     </div>
+                     <div className={styles.buttons}>
+                       <Link
+                         href={`/single/${post.short}`}
+                         as={`/projects/${post.short}`}
+                         passHref
+                       >
+                         <Button>{t.project_button}</Button>
+                       </Link>
+                     </div>
+                   </div>
+                 </div>
+               )
+             })}
+             </div>
+            )}
         </AnimatePresence>
       </motion.div>
     </div>
