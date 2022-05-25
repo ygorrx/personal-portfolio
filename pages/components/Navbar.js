@@ -6,14 +6,13 @@ import { motion, useViewportScroll } from 'framer-motion'
 import { IconContext } from 'react-icons'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { useRouter } from 'next/router'
-import en from '../../public/locales/en/en'
-import pt from '../../public/locales/pt/pt'
+import useTranslate from '../helper/useTranslate'
 
 const Navbar = ({ theme, setTheme }) => {
   const { scrollY } = useViewportScroll()
   const router = useRouter()
   const { locale } = router
-  const t = locale === 'en' ? en : pt
+  const translate = useTranslate()
 
   const [hidden, setHidden] = React.useState(false)
 
@@ -81,21 +80,21 @@ const Navbar = ({ theme, setTheme }) => {
             <li>
               <Link href="/Projects">
                 <a className={router.pathname == '/Projects' ? 'active' : ''}>
-                  {t.nav1}
+                  {translate.nav1}
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/About">
                 <a className={router.pathname == '/About' ? 'active' : ''}>
-                  {t.nav2}
+                  {translate.nav2}
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/Contact">
                 <a className={router.pathname == '/Contact' ? 'active' : ''}>
-                  {t.nav3}
+                  {translate.nav3}
                 </a>
               </Link>
             </li>
