@@ -4,19 +4,11 @@ import styles from '../../styles/SingleProject.module.css'
 import Link from 'next/link'
 import Button from '../components/Button'
 import Head from 'next/head'
+import useTranslate from '../helper/useTranslate'
 
 const transition = {
   duration: 1,
   ease: [0.43, 0.13, 0.23, 0.96]
-}
-
-const imageVariants = {
-  exit: { y: '50%', opacity: 0, transition },
-  enter: {
-    y: '0%',
-    opacity: 1,
-    transition
-  }
 }
 
 const backVariants = {
@@ -25,6 +17,9 @@ const backVariants = {
 }
 
 const Mypetz = () => {
+
+  const translate = useTranslate();
+  
   return (
     <>
     <Head>
@@ -55,29 +50,23 @@ const Mypetz = () => {
             }}
           >
             <h1>myPetz</h1>
-            <h2>A social network for your pets.</h2>
+            <h2>{translate.petzh2}</h2>
           </motion.div>
           <motion.div className={styles.back} variants={backVariants}>
-            <Link href="/Projects">← Back to projects</Link>
+            <Link href="/Projects">{translate.backtoprojects}</Link>
           </motion.div>
         </motion.div>
       </AnimatePresence>
       <div className={styles.description}>
-        <h1>about the project: myPetz</h1>
+        <h1>{translate.petzh1}</h1>
         <p>
-          Origamid's React course project completion inspired the creation of
-          myPetz. The task was to construct an app that uses the course's API to
-          allow you to utilize the site as a social network where you can
-          publish, comment on, and browse images of your pets and other’s. The
-          API allows the data to last 10 minutes on the server, so that’s the
-          max. amount of time your photo is going to be on your profile.
+          {translate.petzp}
         </p>
-        <h2>Features</h2>
+        <h2>{translate.features}</h2>
         <p>
-          ✔️ User Creation/Login/Password Loss | ✔️ Posting photos/comments | ✔️
-          View statistics of your photos
+          {translate.petzfeats}
         </p>
-        <h2>Techs Used</h2>
+        <h2>{translate.techsused}</h2>
         <p>
           ReactJs | CSS Modules | Fetch API | Custom Hooks | Lottie | Victory |
           NPM{' '}
@@ -87,14 +76,14 @@ const Mypetz = () => {
                 href="https://mypetz.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><Button>See it Live!</Button></a>
+              ><Button>{translate.btnSingle}</Button></a>
                <a
                 href="https://github.com/ygorrx/animals"
                 target="_blank"
                 rel="noopener noreferrer"
               ><Button>Github Repo</Button></a>
         </div>
-        <h2>Some screenshots:</h2>
+        <h2>{translate.screenS}</h2>
       </div>
       <div className={styles.img_container}>
         <div className={styles.image_card}>
