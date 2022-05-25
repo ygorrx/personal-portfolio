@@ -29,5 +29,13 @@ export default {
   project_button: 'Veja o projeto!',
   thank1: 'Obrigado por entrar em contato!',
   thank2: 'Em breve retornarei uma resposta para seu e-mail.',
-  thank3: '← Voltar para a página principal'
+  thank3: '← Voltar para a página principal',
+  contacth1: 'contato',
+  contactp:
+    'Se você quer dizer algo pra mim, sinta-se a vontade para falar comigo pelo formulário abaixo.',
+  input1: 'Nome',
+  input2: 'Endereço de Email',
+  input3: 'Assunto',
+  input4: 'Mensagem',
+  contact_button: 'Enviar Mensagem'
 }

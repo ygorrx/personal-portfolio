@@ -30,5 +30,13 @@ export default {
   project_button: 'See the projects!',
   thank1: 'Thank you for contacting!',
   thank2: 'Soon I will return a response to your e-mail.',
-  thank3: '← Go back to home'
+  thank3: '← Go back to home',
+  contacth1: 'contact',
+  contactp:
+    'If you want to say anything to me, feel free to contact me on the form below.',
+  input1: 'Name',
+  input2: 'Email Address',
+  input3: 'Subject',
+  input4: 'Message',
+  contact_button: 'Send Message'
 }
