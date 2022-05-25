@@ -4,19 +4,11 @@ import styles from '../../styles/SingleProject.module.css'
 import Link from 'next/link'
 import Button from '../components/Button'
 import Head from 'next/head'
+import useTranslate from '../helper/useTranslate'
 
 const transition = {
   duration: 1,
   ease: [0.43, 0.13, 0.23, 0.96]
-}
-
-const imageVariants = {
-  exit: { y: '50%', opacity: 0, transition },
-  enter: {
-    y: '0%',
-    opacity: 1,
-    transition
-  }
 }
 
 const backVariants = {
@@ -25,6 +17,9 @@ const backVariants = {
 }
 
 const blackmirror = () => {
+
+const translate = useTranslate();
+
   return (
     <>
       <Head>
@@ -55,26 +50,21 @@ const blackmirror = () => {
               }}
             >
               <h1>Black Mirror</h1>
-              <h2>Web Interface for the TV series Black Mirror.</h2>
+              <h2>{translate.bmh2}</h2>
             </motion.div>
             <motion.div className={styles.back} variants={backVariants}>
-              <Link href="/Projects">← Back to projects</Link>
+              <Link href="/Projects">{translate.backtoprojects}</Link>
             </motion.div>
           </motion.div>
         </AnimatePresence>
         <div className={styles.description}>
-          <h1>about the project: Black Mirror</h1>
+          <h1>{translate.bmh1}</h1>
+          <p>{translate.bmp}</p>
+          <h2>{translate.features}</h2>
           <p>
-            This concept brings the atmosphere of Black Mirror into its own
-            website. The prototype seeks to provide users with more information
-            about the series, including character profiles and cast information
-            for each episode, as well as the ability to watch it.
+            {translate.bmfeats}
           </p>
-          <h2>Features</h2>
-          <p>
-            ✔️ Characters Description | ✔️ Episodes Selection | ✔️ Media Player
-          </p>
-          <h2>Techs Used</h2>
+          <h2>{translate.techsused}</h2>
           <p>Adobe XD | Adobe Photoshop | Adobe After Effects</p>
           <div className={styles.buttons}>
             <a
@@ -82,10 +72,10 @@ const blackmirror = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button>See the full project!</Button>
+              <Button>{translate.btnSingle}</Button>
             </a>
           </div>
-          <h2>Some screenshots:</h2>
+          <h2>{translate.screenS}</h2>
         </div>
         <div className={styles.img_container}>
           <div className={styles.image_card}>
