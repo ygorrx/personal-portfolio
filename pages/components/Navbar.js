@@ -41,8 +41,7 @@ const Navbar = ({ theme, setTheme }) => {
 
   const changeLanguage = (e) => {
     const locale = e.target.value
-    const path = locale + router.pathname
-    router.replace(path, path, { locale })
+    router.push(router.pathname, router.asPath, { locale });
   }
 
   return (
