@@ -4,6 +4,7 @@ import styles from '../../styles/SingleProject.module.css'
 import Link from 'next/link'
 import Button from '../components/Button'
 import Head from 'next/head'
+import useTranslate from '../helper/useTranslate'
 
 const transition = {
   duration: 1,
@@ -25,6 +26,9 @@ const backVariants = {
 }
 
 const myPetz = () => {
+
+  const translate = useTranslate();
+
   return (
     <>
     <Head>
@@ -55,34 +59,33 @@ const myPetz = () => {
           }}
         >
             <h1>Harry Potter</h1>
-            <h2>World of Magic Website</h2>
+            <h2>{translate.hph2}</h2>
           </motion.div>
           <motion.div className={styles.back} variants={backVariants}>
-            <Link href="/Projects">← Back to projects</Link>
+            <Link href="/Projects">{translate.backtoprojects}</Link>
           </motion.div>
         </motion.div>
       </AnimatePresence>
       <div className={styles.description}>
-          <h1>about the project: Harry Potter</h1>
-          <p>This website was developed for a study case. I deciced to choose a random API from the repo: <a>https://github.com/public-apis/public-apis</a>. The one I choose was the Harry Potter one, who had some info about the characters. After that, I planned the whole website to fit the use of the API. I made everything, from the design to the animations.
-I had to fork the original API to make changes too, like adding images do the data I wanted to use.</p>
-          <h2>Features</h2>
-          <p>✔️ API consumption | ✔️ Filtering/Pagination | ✔️ Modals and Animations;</p>
-          <h2>Techs Used</h2>
+          <h1>{translate.hph1}</h1>
+          <p>{translate.hpp}</p>
+          <h2>{translate.features}</h2>
+          <p>{translate.hpfeats}</p>
+          <h2>{translate.techsused}</h2>
           <p>ReactJs | CSS Modules | Axios | Custom Hooks | Lottie | NPM | Heroku | Netlify | Express</p>
           <div className={styles.buttons}>
           <a
                 href="harrypotterwom.netlify.app/#/"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><Button>See it Live!</Button></a>
+              ><Button>{translate.btnSingle}</Button></a>
               <a
                 href="https://github.com/ygorrx/hpteste"
                 target="_blank"
                 rel="noopener noreferrer"
               ><Button>Github Repo</Button></a>
           </div>
-          <h2>Some screenshots:</h2>
+          <h2>{translate.screenS}</h2>
         </div>
         <div className={styles.img_container}>
         <div className={styles.image_card}>
