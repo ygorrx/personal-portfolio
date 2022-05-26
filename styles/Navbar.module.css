@@ -9,7 +9,8 @@
 
 .nav {
     max-width: 100rem;
-    width: 100vw;
+    width: 90vw;
+    margin: 0 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

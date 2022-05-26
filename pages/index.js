@@ -171,6 +171,7 @@ const Home = () => {
                 layout="responsive"
                 width="663"
                 height="887"
+                priority
               />
             </motion.div>
           </div>

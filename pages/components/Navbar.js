@@ -114,21 +114,9 @@ const Navbar = ({ theme, setTheme }) => {
               className={styles.selector}
             >
               <option value="en">
-                <Image
-                  src="/assets/usflag.svg"
-                  width="15"
-                  height="15"
-                  alt="usflag"
-                ></Image>
                 EN
               </option>
               <option value="pt">
-                <Image
-                  src="/assets/brflag.svg"
-                  width="15"
-                  height="15"
-                  alt="brflag"
-                ></Image>
                 PT
               </option>
             </select>
