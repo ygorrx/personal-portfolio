@@ -16,9 +16,8 @@ const backVariants = {
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } }
 }
 
-const blackmirror = () => {
-
-const translate = useTranslate();
+const Blackmirror = () => {
+  const translate = useTranslate()
 
   return (
     <>
@@ -61,9 +60,7 @@ const translate = useTranslate();
           <h1>{translate.bmh1}</h1>
           <p>{translate.bmp}</p>
           <h2>{translate.features}</h2>
-          <p>
-            {translate.bmfeats}
-          </p>
+          <p>{translate.bmfeats}</p>
           <h2>{translate.techsused}</h2>
           <p>Adobe XD | Adobe Photoshop | Adobe After Effects</p>
           <div className={styles.buttons}>
@@ -79,16 +76,32 @@ const translate = useTranslate();
         </div>
         <div className={styles.img_container}>
           <div className={styles.image_card}>
-            <Image src="/assets/screenshots-bm/homebm.png" layout="fill" />
+            <Image
+              src="/assets/screenshots-bm/homebm.png"
+              layout="fill"
+              className={styles.image}
+            />
           </div>
           <div className={styles.image_card}>
-            <Image src="/assets/screenshots-bm/about.png" layout="fill" />
+            <Image
+              src="/assets/screenshots-bm/about.png"
+              layout="fill"
+              className={styles.image}
+            />
           </div>
           <div className={styles.image_card}>
-            <Image src="/assets/screenshots-bm/episodes.png" layout="fill" />
+            <Image
+              src="/assets/screenshots-bm/episodes.png"
+              layout="fill"
+              className={styles.image}
+            />
           </div>
           <div className={styles.image_card}>
-            <Image src="/assets/screenshots-bm/episode-1.png" layout="fill" />
+            <Image
+              src="/assets/screenshots-bm/episode-1.png"
+              layout="fill"
+              className={styles.image}
+            />
           </div>
         </div>
       </div>
@@ -96,4 +109,4 @@ const translate = useTranslate();
   )
 }
 
-export default blackmirror
+export default Blackmirror

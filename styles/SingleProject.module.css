@@ -44,14 +44,14 @@
 
 .description {
   max-width: 100rem;
-  width: 100rem;
+  width: 100vw;
   height: 100%;
   padding-bottom: 4rem;
   font-family: var(--type-first);
   background: var(--background);
   color: var(--text-primary);
-  padding-top: 2rem;
   margin: 0 auto;
+  padding: 2rem 3rem;
 }
 
 .description h1 {
@@ -72,7 +72,7 @@
 
 .buttons {
   margin-top: 2rem;
-  width:40%;
+  width:45%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -81,7 +81,7 @@
 
 .img_container {
   max-width: 100rem;
-  width: 100rem;
+  width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -96,8 +96,23 @@
   height: 800px;
   position: relative;
   object-fit: contain;
-  margin-bottom: 2rem;
+  padding: 0 2rem;
 }
+
+.image_card {
+
+  width: 100%;
+}
+.image_card div {
+    position: unset !important;
+  }
+
+.image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
 
 .image_card2{
   width: 357px;
@@ -111,5 +126,94 @@
 .containerImg{
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1440px) {
+  .buttons{
+    width: 30%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .video_card{
+    height: 50vh;
+  }
+
+  .text {
+    top: 150px;
+    right: 80px;
+  }
+  
+  .text h1 {
+    font-size: 5rem;
+  }
+  
+  .back{      
+    right: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    right: 50px;
+  }
+
+  .text h2 {
+    font-size: 1rem;
+  }
+  
+  .text h1 {
+    font-size: 5rem;
+  }
+  
+  .back{      
+    right: 50px;
+  }
+
+  .buttons{
+    width: 50%;
+  }
+
+  .image_card {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .video_card{
+    height: 30vh;
+  }
+
+  .text {
+    right: 20px;
+    top: 110px;
+  }
+
+  .text h2 {
+    font-size: 0.7rem;
+  }
+  
+  .text h1 {
+    font-size: 2rem;
+  }
+  
+  .back{      
+    right: 20px;
+  }
+
+  .buttons{
+    width: 100%;
+  }
+
+  .image_card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .containerImg{
+    flex-direction: column;
+  }
 }
 
