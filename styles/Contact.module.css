@@ -90,3 +90,65 @@
   object-fit: contain;
   justify-content: end;
 }
+
+@media (max-width: 1440px){
+  .container_wrapper{
+    padding-left: 2rem;
+    grid-template-columns: 1.1fr 1.1fr; 
+  }
+}
+
+@media (max-width: 1024px){
+  .container_wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 768px){
+  .container_center{
+    padding-top: 4rem;
+    padding-left: 5rem;
+  }
+  
+  .form {
+    width: 600px;
+    margin-left: 5rem;
+  }
+
+  .image_card {
+ 
+    margin-left: 3rem;
+    width: 600px;
+    height: 600px;
+    }
+}
+
+@media (max-width: 425px){
+  .container_center{
+    padding-top: 4rem;
+    padding-left: 1rem;
+  }
+
+  .container_center p {
+    font-size: 1rem;
+    width: 350px;
+    line-break: auto;
+  }
+  
+  .form {
+    width: 350px;
+    margin-left: 1rem;
+  }
+
+  .image_card {
+ 
+    margin-left: 1rem;
+    width: 350px;
+    height: 350px;
+    }
+}
