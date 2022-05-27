@@ -54,3 +54,50 @@
   color: var(--text-primary);
   cursor: pointer;
 }
+
+@media (max-width: 1440px){
+  .container_wrapper{
+    padding-left: 2rem;
+    grid-template-columns: 1.1fr 1.1fr; 
+  }
+}
+
+@media (max-width: 1024px){
+
+  .container {
+    height: 100vh;
+  }
+
+
+  .container_wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px){
+
+  .container_wrapper{
+    width: 100vw;
+  }
+
+  .container_center{
+    width: 100vw;
+  }
+
+  .container_center p,
+  .container_center h1 {
+    margin-left: 2rem;
+  }
+  
+  .image_card {
+   
+    width: 600px;
+    height: 600px;
+    
+  }
+  
+  .container_center span {
+    margin-left: 2rem;
+  }
+}
