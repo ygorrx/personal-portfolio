@@ -21,7 +21,7 @@ export const contentPT = [
     id: 3,
     title: 'Netflix clone',
     short: 'netflix',
-    description: "Um clone simples da interface da Netflix.",
+    description: 'Um clone simples da interface da Netflix.',
     date: '12 February, 2022',
     image: 'https://i.imgur.com/XNHWgNO.png',
     techs: 'Desenvolvimento Web'

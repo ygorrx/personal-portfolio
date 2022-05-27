@@ -38,3 +38,11 @@
   .icons a{
     margin-right: 1.3em;
   }
+
+  @media (max-width: 425px){
+    .footer{
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }

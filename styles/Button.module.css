@@ -59,7 +59,7 @@
  .btn span:after {
    position: absolute;
    content: "";
-   background: (--background-2);
+   background: var(--background-2);
  }
  .btn span:before {
    left: 0;
@@ -82,3 +82,9 @@
    width: 100%;
  }
  
+ @media (max-width: 1440px) {
+  .button{
+    width: 150px;
+  }
+
+ }

@@ -41,7 +41,7 @@ const Navbar = ({ theme, setTheme }) => {
 
   const changeLanguage = (e) => {
     const locale = e.target.value
-    router.push(router.pathname, router.asPath, { locale });
+    router.push(router.pathname, router.asPath, { locale })
   }
 
   return (
@@ -113,12 +113,8 @@ const Navbar = ({ theme, setTheme }) => {
               defaultValue={locale}
               className={styles.selector}
             >
-              <option value="en">
-                EN
-              </option>
-              <option value="pt">
-                PT
-              </option>
+              <option value="en">EN</option>
+              <option value="pt">PT</option>
             </select>
           </ul>
         </div>
