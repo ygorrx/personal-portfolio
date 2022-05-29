@@ -5,20 +5,20 @@ import {
   FaMailBulk,
   FaGithub,
   FaLinkedinIn,
-  FaInstagram
+  FaInstagram,
+  FaFileDownload
 } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import { motion } from 'framer-motion'
 import ProjectSolo from './components/ProjectSolo'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import en from '../public/locales/en/en'
-import pt from '../public/locales/pt/pt'
+import useTranslate from './helper/useTranslate'
+import { useInView } from 'react-intersection-observer'
+import Button from './components/Button'
 
 const Home = () => {
-  const router = useRouter()
-  const { locale } = router
-  const t = locale === 'en' ? en : pt
+  const translate = useTranslate()
+  const { ref: myProject2, inView: myProjectVisible2 } = useInView()
 
   return (
     <>
@@ -47,10 +47,10 @@ const Home = () => {
               }}
             >
               <h2>
-                <span>{t.homeH1}</span> {t.homeH1_2}
+                <span>{translate.homeH1}</span> {translate.homeH1_2}
               </h2>
-              <h1>{t.homeH1_3}</h1>
-              <p>{t.homep1}</p>
+              <h1>{translate.homeH1_3}</h1>
+              <p>{translate.homep1}</p>
             </motion.div>
           </div>
 
@@ -80,7 +80,7 @@ const Home = () => {
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href="https://https://github.com/ygorrx"
+                href="https://github.com/ygorrx"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -180,6 +180,26 @@ const Home = () => {
       </div>
       <div>
         <ProjectSolo />
+      </div>
+      <div
+        ref={myProject2}
+        className={`${styles.text_title_2} ${
+          myProjectVisible2 ? 'textTitleAnimate' : ''
+        }`}
+      >
+        <IconContext.Provider
+          value={{ size: '25px', color: 'var(--text-primary)' }}
+        >
+          <FaFileDownload />
+        </IconContext.Provider>
+        <h2>{translate.about_resume}</h2>
+        <a
+          href="https://drive.google.com/file/d/1gFZn9TknK_OEtUhLlseTG1kLUm5s77EA/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>{translate.about_button}</Button>
+        </a>
       </div>
     </>
   )

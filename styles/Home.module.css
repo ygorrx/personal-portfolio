@@ -86,6 +86,21 @@
     border: 2px solid var(--background-2);
     border-radius: 25px
 }
+
+.text_title_2{
+  display: flex;
+  background: var(--background);
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--type-first);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--background-2);
+  padding: 5rem 0;
+}
+
 @media (max-width: 1024px) {
     .icon_scroll {
         position: relative
