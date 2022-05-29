@@ -46,7 +46,7 @@ const Footer = () => {
             whileTap={{ scale: 0.9 }}
           >
             <a
-              href="https://https://github.com/ygorrx"
+              href="https://github.com/ygorrx"
               target="_blank"
               rel="noopener noreferrer"
             >
