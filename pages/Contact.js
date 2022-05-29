@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Ygor Moreira | Contact</title>
+        <title>Ygor Moreira | {translate.headContact}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={`animeLeft ${styles.container}`}>

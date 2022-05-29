@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Ygor Moreira | About</title>
+        <title>Ygor Moreira | {translate.headAbout}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={`animeLeft ${styles.container}`}>
@@ -43,7 +43,7 @@ const About = () => {
             </p>
           </motion.div>
           <div className={styles.image_card}>
-            <Image src="/assets/foto-port.png" layout="fill" />
+            <Image src="/assets/foto-about1.jpeg" layout="fill" />
           </div>
           <div
             ref={myProject}

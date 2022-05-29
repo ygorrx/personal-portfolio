@@ -20,7 +20,7 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Ygor Moreira | Projects</title>
+        <title>Ygor Moreira | {t.headProject}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={`animeLeft ${styles.container}`}>

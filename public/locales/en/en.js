@@ -62,5 +62,9 @@ export default {
   bmh2: 'Web Interface for the TV series Black Mirror.',
   bmh1: 'about the project: Black Mirror',
   bmp: 'This concept brings the atmosphere of Black Mirror into its own website. The prototype seeks to provide users with more information about the series, including character profiles and cast information for each episode, as well as the ability to watch it.',
-  bmfeats: '✔️ Characters Description | ✔️ Episodes Selection | ✔️ Video Player'
+  bmfeats:
+    '✔️ Characters Description | ✔️ Episodes Selection | ✔️ Video Player',
+  headAbout: 'About',
+  headContact: 'Contact',
+  headProject: 'Projects'
 }

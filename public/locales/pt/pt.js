@@ -61,5 +61,8 @@ export default {
   bmh1: 'sobre o projeto: Black Mirror',
   bmp: 'Este conceito trás a atmosfera de Black Mirror em seu próprio website. O protótipo procura oferecer aos usuários mais informações sobre a série, incluindo perfil de personagens e informações do elenco para cada episódio, como a possibilidade de assisti-los.',
   bmfeats:
-    '✔️ Descrição de Personagens | ✔️ Seleção de Episódios | ✔️ Player de video'
+    '✔️ Descrição de Personagens | ✔️ Seleção de Episódios | ✔️ Player de video',
+  headAbout: 'Sobre',
+  headContact: 'Contato',
+  headProject: 'Projetos'
 }
