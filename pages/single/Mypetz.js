@@ -22,7 +22,7 @@ const Mypetz = () => {
   return (
     <>
       <Head>
-        <title>Ygor Moreira | Projects | myPetz</title>
+        <title>Ygor Moreira | {translate.headProject} | myPetz</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.single}>

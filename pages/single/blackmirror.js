@@ -22,7 +22,7 @@ const Blackmirror = () => {
   return (
     <>
       <Head>
-        <title>Ygor Moreira | Projects | Black Mirror</title>
+        <title>Ygor Moreira | {translate.headProject} | Black Mirror</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.single}>

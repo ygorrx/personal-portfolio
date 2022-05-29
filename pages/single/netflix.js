@@ -22,7 +22,7 @@ const Netflix = () => {
   return (
     <>
       <Head>
-        <title>Ygor Moreira | Projects | Netflix Clone</title>
+        <title>Ygor Moreira | {translate.headProject} | Netflix Clone</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.single}>
