@@ -7,8 +7,16 @@ import { IconContext } from 'react-icons'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import useTranslate from '../helper/useTranslate'
+import useMedia from '../helper/useMedia'
 
 const Navbar = ({ theme, setTheme }) => {
+  const mobile = useMedia('(max-width: 768px)')
+  const [mobileMenu, setMobileMenu] = React.useState(false)
+
+  React.useEffect(() => {
+    setMobileMenu(false)
+  }, [locale])
+
   const { scrollY } = useViewportScroll()
   const router = useRouter()
   const { locale } = router
@@ -24,7 +32,6 @@ const Navbar = ({ theme, setTheme }) => {
     }
   }
 
-  /** update the onChange callback to call for `update()` **/
   React.useEffect(() => {
     return scrollY.onChange(() => update())
   })
@@ -45,13 +52,14 @@ const Navbar = ({ theme, setTheme }) => {
   }
 
   return (
-    <nav className={styles.navbar}>
-      <motion.nav
-        variants={variants}
-        animate={hidden ? 'hidden' : 'visible'}
-        transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
-      >
-        <div className={styles.nav}>
+    <>
+      <nav className={styles.navbar}>
+        <motion.nav
+          className={styles.nav_2}
+          variants={variants}
+          animate={hidden ? 'hidden' : 'visible'}
+          transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
+        >
           {theme === 'light' ? (
             <Link href="/">
               <div className={styles.link_home}>
@@ -75,51 +83,76 @@ const Navbar = ({ theme, setTheme }) => {
               </div>
             </Link>
           )}
-          <ul className={styles.link_items}>
-            <li>
-              <Link href="/Projects">
-                <a className={router.pathname == '/Projects' ? 'active' : ''}>
-                  {translate.nav1}
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/About">
-                <a className={router.pathname == '/About' ? 'active' : ''}>
-                  {translate.nav2}
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/Contact">
-                <a className={router.pathname == '/Contact' ? 'active' : ''}>
-                  {translate.nav3}
-                </a>
-              </Link>
-            </li>
-            <button className={styles.button} onClick={switchTheme}>
-              {theme === 'light' ? (
-                <IconContext.Provider value={{ size: '25px', color: 'black' }}>
-                  <FaMoon />
-                </IconContext.Provider>
-              ) : (
-                <IconContext.Provider value={{ size: '25px', color: 'white' }}>
-                  <FaSun />
-                </IconContext.Provider>
-              )}
-            </button>
-            <select
-              onChange={changeLanguage}
-              defaultValue={locale}
-              className={styles.selector}
+          {mobile && (
+            <button
+              aria-label="Menu"
+              className={`${styles.mobileButton} ${
+                mobileMenu && styles.mobileButtonActive
+              }`}
+              onClick={() => setMobileMenu(!mobileMenu)}
+            ></button>
+          )}
+          <div
+            className={`${mobile ? styles.navMobile : styles.nav} ${
+              mobileMenu && styles.navMobileActive
+            }`}
+          >
+            <ul
+              className={`${mobile ? styles.navMobile : styles.link_items} ${
+                mobileMenu && styles.navMobileActive
+              }`}
             >
-              <option value="en">EN</option>
-              <option value="pt">PT</option>
-            </select>
-          </ul>
-        </div>
-      </motion.nav>
-    </nav>
+              <li>
+                <Link href="/Projects">
+                  <a className={router.pathname == '/Projects' ? 'active' : ''}>
+                    {translate.nav1}
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/About">
+                  <a className={router.pathname == '/About' ? 'active' : ''}>
+                    {translate.nav2}
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/Contact">
+                  <a className={router.pathname == '/Contact' ? 'active' : ''}>
+                    {translate.nav3}
+                  </a>
+                </Link>
+              </li>
+              <div className={styles.navOnMobile}>
+                <button className={styles.button} onClick={switchTheme}>
+                  {theme === 'light' ? (
+                    <IconContext.Provider
+                      value={{ size: '25px', color: 'black' }}
+                    >
+                      <FaMoon />
+                    </IconContext.Provider>
+                  ) : (
+                    <IconContext.Provider
+                      value={{ size: '25px', color: 'white' }}
+                    >
+                      <FaSun />
+                    </IconContext.Provider>
+                  )}
+                </button>
+                <select
+                  onChange={changeLanguage}
+                  defaultValue={locale}
+                  className={styles.selector}
+                >
+                  <option value="en">EN</option>
+                  <option value="pt">PT</option>
+                </select>
+              </div>
+            </ul>
+          </div>
+        </motion.nav>
+      </nav>
+    </>
   )
 }
 
