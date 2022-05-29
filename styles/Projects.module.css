@@ -167,3 +167,38 @@
     
   }
 }
+
+@media (max-width: 425px) {
+  .container{
+    height: 2000px;
+    padding-top: 2rem;
+  }
+  
+  .container_center p {
+    font-size: 1.1rem;
+  }
+
+  .card_container {
+    margin-right: 2rem;
+  }
+
+ .card_body{
+   margin-right: 4rem;
+ }
+
+ .card_body p {
+   font-size: 1rem;
+ }
+
+  .image_card{
+    width: 250px;
+    height: 180px;
+    margin-left: 2rem;
+  }
+
+  .buttons {
+    width:250px;
+    margin-left: 2rem;
+    
+  }
+}
