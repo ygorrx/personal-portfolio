@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center" id="top"> 
+  <img src="https://i.imgur.com/VogI9H8.png" alt="Personal Portfolio" />
 
-## Getting Started
+&#xa0;
 
-First, run the development server:
+  <!-- <a href="https://myPetz.netlify.app">myPetz</a> -->
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<h1 align="center">Ygor Moreira - Personal Portfolio</h1>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/ygorrx/personal-porfolio?color=56BEB8">
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/ygorrx/personal-porfolio?color=56BEB8">
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ygorrx/personal-porfolio?color=56BEB8">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  <img alt="License" src="https://img.shields.io/github/license/ygorrx/personal-porfolio?color=56BEB8">
 
-## Learn More
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/animals?color=56BEB8" /> -->
 
-To learn more about Next.js, take a look at the following resources:
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/animals?color=56BEB8" /> -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/animals?color=56BEB8" /> -->
+</p>
