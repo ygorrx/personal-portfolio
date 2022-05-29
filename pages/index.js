@@ -62,7 +62,7 @@ const Home = () => {
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                href="mailto:ygoroliveira55@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -80,7 +80,7 @@ const Home = () => {
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                href="https://https://github.com/ygorrx"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -98,7 +98,7 @@ const Home = () => {
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                href="https://www.linkedin.com/in/ygor-moreira-226672214/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -116,7 +116,7 @@ const Home = () => {
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                href="https://www.instagram.com/ygorrx/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -134,7 +134,7 @@ const Home = () => {
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                href="https://www.behance.net/ygorom"
                 target="_blank"
                 rel="noopener noreferrer"
               >
