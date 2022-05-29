@@ -104,21 +104,36 @@ const Navbar = ({ theme, setTheme }) => {
             >
               <li>
                 <Link href="/Projects">
-                  <a className={router.pathname == '/Projects' ? 'active' : ''}>
+                  <a
+                    onClick={() => setMobileMenu(false)}
+                    className={`${
+                      router.pathname == '/Projects' ? 'active' : ''
+                    } ${mobileMenu && styles.mobileButtonActive}`}
+                  >
                     {translate.nav1}
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/About">
-                  <a className={router.pathname == '/About' ? 'active' : ''}>
+                  <a
+                    onClick={() => setMobileMenu(false)}
+                    className={`${
+                      router.pathname == '/About' ? 'active' : ''
+                    } ${mobileMenu && styles.mobileButtonActive}`}
+                  >
                     {translate.nav2}
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/Contact">
-                  <a className={router.pathname == '/Contact' ? 'active' : ''}>
+                  <a
+                    onClick={() => setMobileMenu(false)}
+                    className={`${
+                      router.pathname == '/Contact' ? 'active' : ''
+                    } ${mobileMenu && styles.mobileButtonActive}`}
+                  >
                     {translate.nav3}
                   </a>
                 </Link>
