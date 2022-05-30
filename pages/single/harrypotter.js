@@ -68,7 +68,7 @@ const HarryPotter = () => {
           </p>
           <div className={styles.buttons}>
             <a
-              href="harrypotterwom.netlify.app/#/"
+              href="https://harrypotterwom.netlify.app/#/"
               target="_blank"
               rel="noopener noreferrer"
             >
