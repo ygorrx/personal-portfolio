@@ -28,11 +28,12 @@ function MyApp({ Component, pageProps, router }) {
                 opacity: 0
               }}
               exit={{
+                x: -100,
                 opacity: 0,
                 ease: 'easeOut'
               }}
               transition={{
-                duration: 0.4,
+                duration: 0.5,
                 ease: 'easeIn'
               }}
             >
