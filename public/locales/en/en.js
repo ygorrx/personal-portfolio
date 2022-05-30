@@ -52,7 +52,7 @@ export default {
   screenS: 'Some screenshots:',
   hph2: 'World of Magic Website.',
   hph1: 'about the project: Harry Potter',
-  hpp: 'This website was developed for a study case. I deciced to choose a random API from the repo: <a>https://github.com/public-apis/public-apis</a>. The one I choose was the Harry Potter one, who had some info about the characters. After that, I planned the whole website to fit the use of the API. I made everything, from the design to the animations. I had to fork the original API to make changes too, like adding images do the data I wanted to use.',
+  hpp: 'This website was developed for a study case. I deciced to choose a random API from the repo: https://github.com/public-apis/public-apis. The one I choose was the Harry Potter one, who had some info about the characters. After that, I planned the whole website to fit the use of the API. I made everything, from the design to the animations. I had to fork the original API to make changes too, like adding images do the data I wanted to use.',
   hpfeats:
     '✔️ API consumption | ✔️ Filtering/Pagination | ✔️ Modals and Animations',
   neth2: "A simple clone of Netflix's website.",

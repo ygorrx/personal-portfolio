@@ -51,7 +51,7 @@ export default {
   screenS: 'Algumas imagens de tela:',
   hph2: 'Site do Mundo Mágico.',
   hph1: 'sobre o projeto: Harry Potter',
-  hpp: 'Este site foi desenvolvido para um estudo de caso. Eu decidi escolher uma API aleatória do repositório: <a>https://github.com/public-apis/public-apis</a>. A que eu escolhi foi a do Harry Potter, que tinha algumas informações sobre os personagens. Após isso, eu planejei todo o site para se adequar ao uso da API. Eu fiz tudo, do design do layout até as animações. Eu tive que fazer um fork na API original para realizar algumas mudanças também, como adicionar imagens aos dados que eu iria usar.',
+  hpp: 'Este site foi desenvolvido para um estudo de caso. Eu decidi escolher uma API aleatória do repositório: https://github.com/public-apis/public-apis. A que eu escolhi foi a do Harry Potter, que tinha algumas informações sobre os personagens. Após isso, eu planejei todo o site para se adequar ao uso da API. Eu fiz tudo, do design do layout até as animações. Eu tive que fazer um fork na API original para realizar algumas mudanças também, como adicionar imagens aos dados que eu iria usar.',
   hpfeats: '✔️ Consumo de API | ✔️ Filtragem/Paginação | ✔️ Modais e Animações',
   neth2: 'Um clone simples do site da Netflix.',
   neth1: 'sobre o projeto: Netflix',
