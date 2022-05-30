@@ -94,7 +94,7 @@ const Mypetz = () => {
           </div>
           <div className={styles.image_card}>
             <Image
-              src="/assets/screenshots-mypetz/login.png"
+              src="/assets/screenshots-mypetz/Login.png"
               layout="fill"
               className={styles.image}
             />
