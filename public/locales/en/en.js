@@ -66,5 +66,8 @@ export default {
     '✔️ Characters Description | ✔️ Episodes Selection | ✔️ Video Player',
   headAbout: 'About',
   headContact: 'Contact',
-  headProject: 'Projects'
+  headProject: 'Projects',
+  psolo1: 'recent projects',
+  psolo2: 'my latest experiments.',
+  psolo3: 'See all projects →'
 }
