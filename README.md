@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ygorrx/personal-portfolio">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/ym-logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Ygor Moreira - Personal Portfolio</h3>
@@ -105,8 +105,6 @@ I had a need to showcase my projects in a best way than just my github. I always
 - [x] Animations
 - [x] Scroll trigger effects
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -138,7 +136,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Project Link: [https://github.com/ygorrx/personal-portfolio](https://github.com/ygorrx/personal-portfolio)
+My Linkedin: [https://www.linkedin.com/in/ygor-moreira-226672214/](https://www.linkedin.com/in/ygor-moreira-226672214/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
