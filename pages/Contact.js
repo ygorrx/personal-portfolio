@@ -3,9 +3,12 @@ import Button from './components/Button'
 import Image from 'next/image'
 import Head from 'next/head'
 import useTranslate from './helper/useTranslate'
+import { useRouter } from 'next/router'
 
 const Contact = () => {
   const translate = useTranslate()
+  const router = useRouter()
+  const { locale } = router
 
   return (
     <>
@@ -21,13 +24,17 @@ const Contact = () => {
           </div>
           <div className={styles.form}>
             <form
-              action="https://formsubmit.co/ygoroliveira55@gmail.com"
+              action="https://formsubmit.co/555a3f71b12cf20668ace279379321b5"
               method="POST"
             >
               <input
                 type="hidden"
                 name="_next"
-                value="http://localhost:3000/ThankPage"
+                value={
+                  locale === 'en'
+                    ? 'ygormoreira-portfolio.vercel.app/ThankPage'
+                    : 'ygormoreira-portfolio.vercel.app/pt/ThankPage'
+                }
               ></input>
               <input type="hidden" name="_captcha" value="false"></input>
               <input
