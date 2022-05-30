@@ -1,9 +1,9 @@
 .container {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: var(--background-2);
   display: flex;
-  
+  overflow-x: hidden;
   justify-content: center;
 }
 
@@ -15,8 +15,9 @@
   grid-template-columns: 0.3fr 0.3fr 3.1fr 0.3fr; 
   grid-template-rows: 0.4fr 0.4fr 2.3fr; 
   padding-top: 10rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
   padding-bottom: 6rem;
+  
 }
 
 .container_center{
