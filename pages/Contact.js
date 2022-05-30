@@ -32,8 +32,8 @@ const Contact = () => {
                 name="_next"
                 value={
                   locale === 'en'
-                    ? 'ygormoreira-portfolio.vercel.app/ThankPage'
-                    : 'ygormoreira-portfolio.vercel.app/pt/ThankPage'
+                    ? 'https://ygormoreira-portfolio.vercel.app/ThankPage'
+                    : 'https://ygormoreira-portfolio.vercel.app/pt/ThankPage'
                 }
               ></input>
               <input type="hidden" name="_captcha" value="false"></input>
