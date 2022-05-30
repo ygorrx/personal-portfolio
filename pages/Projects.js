@@ -24,15 +24,7 @@ const Projects = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={`animeLeft ${styles.container}`}>
-        <motion.div
-          key="container"
-          className={styles.container_wrapper}
-          exit={{
-            scale: 0.5,
-            opacity: 0,
-            transition: { ...transition, duration: 1 }
-          }}
-        >
+        <motion.div key="container" className={styles.container_wrapper}>
           <div className={styles.container_center}>
             <h1 className="title">{t.project1}</h1>
             <p>{t.project2}</p>

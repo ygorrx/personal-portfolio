@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps, router }) {
         <Loading />
       ) : (
         <Layout>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence>
             <motion.div
               key={router.asPath}
               animate={{
