@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import React from 'react'
 import Layout from './components/Layout'
 import Loading from './components/Loading'
-import { motion, AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = React.useState(true)
@@ -16,25 +15,7 @@ function MyApp({ Component, pageProps, router }) {
         <Loading />
       ) : (
         <Layout>
-          <AnimatePresence>
-            <motion.div
-              key={router.asPath}
-              animate={{
-                x: 0,
-                opacity: 1
-              }}
-              initial={{
-                x: 100,
-                opacity: 0
-              }}
-              transition={{
-                duration: 0.2,
-                ease: 'easeIn'
-              }}
-            >
-              <Component {...pageProps} key={router.asPath} />
-            </motion.div>
-          </AnimatePresence>
+          <Component {...pageProps} key={router.asPath} />
         </Layout>
       )}
     </>
