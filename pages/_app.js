@@ -4,7 +4,6 @@ import Layout from './components/Layout'
 import Loading from './components/Loading'
 import { motion, AnimatePresence } from 'framer-motion'
 
-
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = React.useState(true)
   React.useEffect(() => {
