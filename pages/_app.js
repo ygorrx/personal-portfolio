@@ -28,7 +28,6 @@ function MyApp({ Component, pageProps, router }) {
                 opacity: 0
               }}
               exit={{
-                x: -50,
                 opacity: 0,
                 ease: 'easeOut'
               }}
