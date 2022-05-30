@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps, router }) {
         <Loading />
       ) : (
         <Layout>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence>
             <motion.div
               key={router.asPath}
               animate={{
@@ -28,7 +28,6 @@ function MyApp({ Component, pageProps, router }) {
                 opacity: 0
               }}
               exit={{
-                x: -100,
                 opacity: 0,
                 ease: 'easeOut'
               }}
