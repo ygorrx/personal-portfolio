@@ -27,10 +27,6 @@ function MyApp({ Component, pageProps, router }) {
                 x: 100,
                 opacity: 0
               }}
-              exit={{
-                opacity: 0,
-                ease: 'easeOut'
-              }}
               transition={{
                 duration: 0.2,
                 ease: 'easeIn'
