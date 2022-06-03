@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  overflow-x: hidden;
   }
 
 .main {
@@ -19,8 +18,7 @@
   color: var(--text-primary);
   font-family: var(--type-first);
   padding-bottom: 5rem;
-  overflow-x: hidden;
-}
+  }
 
 .text {
   padding-left: 3rem;
@@ -190,7 +188,7 @@
   
 }
 
-@media (max-width: 425px){
+@media (max-width: 550px){
   .container{
     margin-bottom: 0;
   }
