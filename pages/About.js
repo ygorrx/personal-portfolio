@@ -2,12 +2,15 @@ import styles from '../styles/About.module.css'
 import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 import Button from './components/Button'
 import Head from 'next/head'
 import useTranslate from './helper/useTranslate'
 
 const About = () => {
   const translate = useTranslate()
+  const router = useRouter()
+  const { locale } = router
 
   const { ref: myProject, inView: myProjectVisible } = useInView()
   const { ref: myProject2, inView: myProjectVisible2 } = useInView()
@@ -37,13 +40,11 @@ const About = () => {
           >
             <p>
               {translate.about_description1} <span>Ygor Moreira</span>
-              {translate.about_description2}{' '}
-              <span>{translate.about_description3}</span>. <br />{' '}
-              {translate.about_description4}
+              {translate.about_description2} {translate.about_description4}
             </p>
           </motion.div>
           <div className={styles.image_card}>
-            <Image src="/assets/foto-about1.jpeg" layout="fill" />
+            <Image src="/assets/foto-about1.png" layout="fill" />
           </div>
           <div
             ref={myProject}
@@ -64,20 +65,20 @@ const About = () => {
           </ul>
           <ul className={styles.techs_1}>
             <p>{translate.about_techs_p_2}</p>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
+            <li>Angular</li>
+            <li>React.JS</li>
+            <li>Next.JS</li>
             <li>Typescript</li>
-            <li>ReactJs</li>
-            <li>NextJs</li>
+            <li>Java</li>
+            <li>Spring Boot</li>
           </ul>
           <ul className={styles.techs_2}>
-            <li>NodeJs</li>
+            <li>SASS/LESS</li>
             <li>Git</li>
-            <li>Github</li>
+            <li>Gitlab CI/CD</li>
             <li>Styled Components</li>
-            <li>Sass</li>
-            <li>Lottie</li>
+            <li>SCRUM</li>
+            <li>JIRA</li>
           </ul>
           <div className={styles.quote}>
             <h1>{translate.about_quote}</h1>
@@ -90,13 +91,23 @@ const About = () => {
             }`}
           >
             <h2>{translate.about_resume}</h2>
-            <a
-              href="https://drive.google.com/file/d/1gFZn9TknK_OEtUhLlseTG1kLUm5s77EA/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button>{translate.about_button}</Button>
-            </a>
+            {locale === 'en' ? (
+              <a
+                href="https://drive.google.com/file/d/1bRhbxt6HJ5MaMzEoo5uuN-QfJq6nYKH2/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>{translate.about_button}</Button>
+              </a>
+            ) : (
+              <a
+                href="https://drive.google.com/file/d/1TQcmhqjISTDEorngvY54AEhC18cpLhbV/view?usp=sharingile/d/1gFZn9TknK_OEtUhLlseTG1kLUm5s77EA/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>{translate.about_button}</Button>
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -15,9 +15,12 @@ import Head from 'next/head'
 import useTranslate from './helper/useTranslate'
 import { useInView } from 'react-intersection-observer'
 import Button from './components/Button'
+import { useRouter } from 'next/router'
 
 const Home = () => {
   const translate = useTranslate()
+  const router = useRouter()
+  const { locale } = router
   const { ref: myProject2, inView: myProjectVisible2 } = useInView()
 
   return (
@@ -193,13 +196,23 @@ const Home = () => {
           <FaFileDownload />
         </IconContext.Provider>
         <h2>{translate.about_resume}</h2>
-        <a
-          href="https://drive.google.com/file/d/1gFZn9TknK_OEtUhLlseTG1kLUm5s77EA/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button>{translate.about_button}</Button>
-        </a>
+        {locale === 'en' ? (
+          <a
+            href="https://drive.google.com/file/d/1bRhbxt6HJ5MaMzEoo5uuN-QfJq6nYKH2/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>{translate.about_button}</Button>
+          </a>
+        ) : (
+          <a
+            href="https://drive.google.com/file/d/1TQcmhqjISTDEorngvY54AEhC18cpLhbV/view?usp=sharingile/d/1gFZn9TknK_OEtUhLlseTG1kLUm5s77EA/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>{translate.about_button}</Button>
+          </a>
+        )}
       </div>
     </>
   )
